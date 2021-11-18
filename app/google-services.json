@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "831993213206",
+    "project_id": "cardinal-planner",
+    "storage_bucket": "cardinal-planner.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:831993213206:android:579c7e9fe5dd9147222037",
+        "android_client_info": {
+          "package_name": "com.example.myfirstapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "831993213206-mj2jq1le275443g8j4e0oqjq8do8uhvq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsnNwwMukSEOHbLZIsUhp3iP4nSvez9c4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "831993213206-mj2jq1le275443g8j4e0oqjq8do8uhvq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
