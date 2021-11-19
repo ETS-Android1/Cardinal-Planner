@@ -12,6 +12,7 @@ import android.widget.Button;
 import com.example.cardinalPlanner.util.FirebaseUtil;
 import com.example.cardinalPlanner.viewmodel.MainActivityViewModel;
 import com.firebase.ui.auth.AuthUI;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
@@ -28,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseFirestore mFirestore;
     private Query mQuery;
     private MainActivityViewModel mViewModel;
-    private Button userInfo;
+    private Button userInfo,logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,7 +40,14 @@ public class MainActivity extends AppCompatActivity {
 
         FirebaseFirestore.setLoggingEnabled(true);
         mFirestore = FirebaseUtil.getFirestore();
-
+        logout = findViewById(R.id.logOutBtn);
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                startSignIn();
+            }
+        });
         userInfo = findViewById(R.id.userInfo);
         userInfo.setOnClickListener(new View.OnClickListener() {
             @Override

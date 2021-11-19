@@ -73,4 +73,26 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/passBox"
         app:layout_constraintVertical_bias="0.096" />
+
+    <EditText
+        android:id="@+id/currPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Current Password"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/passBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailBox" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To update email or password, please enter current password"
+        app:layout_constraintBottom_toTopOf="@+id/emailBox"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameBox" />
 </androidx.constraintlayout.widget.ConstraintLayout>
