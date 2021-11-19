@@ -6,6 +6,8 @@ import androidx.lifecycle.ViewModelProvider;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.cardinalPlanner.util.FirebaseUtil;
 import com.example.cardinalPlanner.viewmodel.MainActivityViewModel;
@@ -26,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseFirestore mFirestore;
     private Query mQuery;
     private MainActivityViewModel mViewModel;
+    private Button userInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +39,15 @@ public class MainActivity extends AppCompatActivity {
 
         FirebaseFirestore.setLoggingEnabled(true);
         mFirestore = FirebaseUtil.getFirestore();
+
+        userInfo = findViewById(R.id.userInfo);
+        userInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent userInfoPage = new Intent(MainActivity.this,userMgmt.class);
+                startActivity(userInfoPage);
+            }
+        });
 
     }
     @Override
