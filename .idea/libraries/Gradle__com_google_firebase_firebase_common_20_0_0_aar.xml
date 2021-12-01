@@ -1,13 +1,14 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.firebase:firebase-common:20.0.0@aar">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/firebase-common-20.0.0.aar/e1e7acdea91204041cd51ac45485be2c/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/firebase-common-20.0.0.aar/e1e7acdea91204041cd51ac45485be2c/res" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/firebase-common-20.0.0.aar/e1e7acdea91204041cd51ac45485be2c/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-common-20.0.0.aar/601ad00031108b804c4e4154c5a4f58d/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-20.0.0.aar/c27b69777e08146b3b2d2db90cd9ae54/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-20.0.0.aar/c27b69777e08146b3b2d2db90cd9ae54/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-20.0.0.aar/c27b69777e08146b3b2d2db90cd9ae54/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/firebase-common-20.0.0.aar/601ad00031108b804c4e4154c5a4f58d/res" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-20.0.0.aar/c27b69777e08146b3b2d2db90cd9ae54/res" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-20.0.0.aar/c27b69777e08146b3b2d2db90cd9ae54/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-20.0.0.aar/c27b69777e08146b3b2d2db90cd9ae54/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-20.0.0.aar/8741f35cc7afb1e4d6757b572217eecb/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-20.0.0.aar/8741f35cc7afb1e4d6757b572217eecb/res" />
+      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-20.0.0.aar/8741f35cc7afb1e4d6757b572217eecb/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
