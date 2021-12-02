@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF8F8"
+    android:orientation="vertical"
+    tools:context=".CreateEvents">
+
+    <TextView
+        android:id="@+id/header_title"
+        android:layout_width="match_parent"
+        android:layout_height="67dp"
+        android:background="#CF4040"
+        android:text="CREATE EVENTS"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/eventNameInput"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="text"
+        android:text="Name" />
+
+    <EditText
+        android:id="@+id/eventCategoryInput"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="text"
+        android:text="Category" />
+
+    <EditText
+        android:id="@+id/meetingLinkInput"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Meeting Link"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/eventDescriptionInput"
+        android:layout_width="match_parent"
+        android:layout_height="175dp"
+        android:ems="10"
+        android:inputType="textLongMessage"
+        android:text="Description"
+        android:textAlignment="center" />
+
+    <RadioButton
+        android:id="@+id/eventNotifications"
+        android:layout_width="match_parent"
+        android:layout_height="53dp"
+        android:text=" Set Notifications On/Off" />
+
+    <EditText
+        android:id="@+id/dateInput"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Timestamp: (format) yyyy-MM-dd_HH:mm:ss"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/finishEventBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#C85353"
+        android:text="FINISH" />
+
+</LinearLayout>

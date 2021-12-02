@@ -21,12 +21,12 @@ public class Events {
     private String description;
     private String meetingLink;
     private boolean notification;
-    private int userId;
+    private String userId;
 
     public Events() {}
 
     public Events(Date date, String Name, String category, String description, String meetingLink,
-                 boolean notification, int userId){
+                 boolean notification, String userId){
         this.date = date;
         this.Name = Name;
         this.category = category;
@@ -48,8 +48,8 @@ public class Events {
     public String getMeetingLink() { return meetingLink; }
     public void setNotification(boolean notification) { this.notification = notification; }
     public boolean getNotification() { return notification; }
-    public void setUserId(int userId) { this.userId = userId; }
-    public int getUserId() { return userId; }
+    public void setUserId(String userId) { this.userId = userId; }
+    public String getUserId() { return userId; }
 
 
 
