@@ -22,12 +22,12 @@ public class ToDo {
     private String Name;
     private boolean notification;
     private boolean persistantUntilComplete;
-    private int userId;
+    private String userId;
 
     public ToDo() {}
 
     public ToDo(Date date, boolean complete, String description, String Name, boolean notification,
-                boolean persistantUntilComplete, int userId) {
+                boolean persistantUntilComplete, String userId) {
         this.complete = complete;
         this.description = description;
         this.date = date;
@@ -49,9 +49,6 @@ public class ToDo {
     public String getDescription() { return description; }
     public void setNotification(boolean notification) { this.notification = notification; }
     public boolean getNotification() { return notification; }
-    public void setUserId(int userId) { this.userId = userId; }
-    public int getUserId() { return userId; }
-
-
-
+    public void setUserId(String userId) { this.userId = userId; }
+    public String getUserId() { return userId; }
 }

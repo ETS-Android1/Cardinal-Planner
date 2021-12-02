@@ -48,7 +48,7 @@
     <EditText
         android:id="@+id/eventDescriptionInput"
         android:layout_width="match_parent"
-        android:layout_height="175dp"
+        android:layout_height="100dp"
         android:ems="10"
         android:inputType="textLongMessage"
         android:text="Description"
@@ -58,7 +58,7 @@
         android:id="@+id/eventNotifications"
         android:layout_width="match_parent"
         android:layout_height="53dp"
-        android:text=" Set Notifications On/Off" />
+        android:text=" Set Notifications On" />
 
     <EditText
         android:id="@+id/dateInput"

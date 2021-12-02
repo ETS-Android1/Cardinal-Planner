@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.Toast;
 
 import com.example.cardinalPlanner.model.Events;
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,8 +24,6 @@ import java.util.Random;
 
 public class CreateEvents extends AppCompatActivity {
     private FirebaseFirestore mFirestore;
-    private Query mQuery;
-    public String TAG = "CreateEvents";
     EditText NameInput, DateInput, meetingLinkInput, categoryInput, descriptionInput;
     RadioButton notificationsBtn;
     boolean notifications = false;
@@ -55,6 +54,8 @@ public class CreateEvents extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 onAddItemsClicked();
+                Toast.makeText(CreateEvents.this, "New Event Created",
+                        Toast.LENGTH_LONG).show();
             }
         });
 

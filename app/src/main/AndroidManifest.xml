@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".CreateToDo"
+            android:exported="false" />
+        <activity
             android:name=".CreateEvents"
             android:exported="false" />
         <activity
