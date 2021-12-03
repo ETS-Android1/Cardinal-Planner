@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseFirestore mFirestore;
     private Query mQuery;
     private MainActivityViewModel mViewModel;
-    private Button userInfo,logout, events, todo;
+    private Button userInfo,logout, events, todo, eventMgmt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +70,14 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent createToDo = new Intent(MainActivity.this, CreateToDo.class);
                 startActivity(createToDo);
+            }
+        });
+        eventMgmt = findViewById(R.id.eventMgmtBtn);
+        eventMgmt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent eventMgmt = new Intent(MainActivity.this, EventMgmt.class);
+                startActivity(eventMgmt);
             }
         });
 

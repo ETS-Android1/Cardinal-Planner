@@ -83,7 +83,7 @@ public class CreateEvents extends AppCompatActivity {
         Date date = getDateFromString(DateInput.getText().toString());
         String currentuser = FirebaseAuth.getInstance().getCurrentUser().getUid();
         newEvent.setDate(date);
-        newEvent.setEventName(NameInput.getText().toString());
+        newEvent.setName(NameInput.getText().toString());
         newEvent.setCategory(categoryInput.getText().toString());
         newEvent.setDescription(descriptionInput.getText().toString());
         newEvent.setNotification(notifications);

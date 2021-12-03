@@ -38,8 +38,8 @@ public class Events {
 
     public void setDate(Date date) { this.date = date; }
     public Date getDate() { return date; }
-    public void setEventName(String Name) { this.Name = Name; }
-    public String getEventName() { return Name; }
+    public void setName(String Name) { this.Name = Name; }
+    public String getName() { return Name; }
     public void setCategory(String category) { this.category = category; }
     public String getCategory() { return category; }
     public void setDescription(String description) { this.description = description; }
