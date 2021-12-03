@@ -6,14 +6,14 @@
     android:layout_height="match_parent"
     android:background="#FAF8F8"
     android:orientation="vertical"
-    tools:context=".CreateEvents">
+    tools:context=".Events.CreateEvents">
 
     <TextView
         android:id="@+id/header_title"
         android:layout_width="match_parent"
         android:layout_height="67dp"
         android:background="#CF4040"
-        android:text="CREATE EVENTS"
+        android:text="Create Events"
         android:textAlignment="center"
         android:textSize="34sp"
         android:textStyle="bold" />
@@ -60,13 +60,30 @@
         android:layout_height="53dp"
         android:text=" Set Notifications On" />
 
+    <TextView
+        android:id="@+id/TitleTime"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:text="EVENT TIME"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
     <EditText
-        android:id="@+id/dateInput"
+        android:id="@+id/eventDateInput"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:ems="10"
         android:inputType="text"
-        android:text="Timestamp: (format) yyyy-MM-dd_HH:mm:ss"
+        android:text="yyyy-MM-dd"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/eventTimeInput"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="HH:mm:ss"
         android:textAlignment="center" />
 
     <Button

@@ -10,13 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".CreateToDo"
+            android:name=".Events.EventMod"
             android:exported="false" />
         <activity
-            android:name=".CreateEvents"
+            android:name=".ToDos.CreateToDo"
             android:exported="false" />
         <activity
-            android:name=".EventMgmt"
+            android:name=".Events.CreateEvents"
+            android:exported="false" />
+        <activity
+            android:name=".Events.EventMgmt"
             android:exported="false" />
         <activity
             android:name=".userMgmt"
