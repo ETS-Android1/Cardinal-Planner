@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".ToDoMod"
+            android:exported="false" />
+        <activity
+            android:name=".ToDoMgmt"
+            android:exported="false" />
+        <activity
             android:name=".Events.EventMod"
             android:exported="false" />
         <activity

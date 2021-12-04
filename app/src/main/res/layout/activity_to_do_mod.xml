@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="#FAF8F8"
+android:orientation="vertical"
+tools:context=".ToDoMod">
+
+<TextView
+    android:id="@+id/header_title"
+    android:layout_width="match_parent"
+    android:layout_height="67dp"
+    android:background="#CF4040"
+    android:text="Create ToDos"
+    android:textAlignment="center"
+    android:textSize="34sp"
+    android:textStyle="bold" />
+
+<EditText
+    android:id="@+id/NameInput"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:ems="10"
+    android:gravity="center"
+    android:inputType="text"
+    android:text="Name" />
+
+<EditText
+    android:id="@+id/DescriptionInput"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:ems="10"
+    android:inputType="textLongMessage"
+    android:text="Description"
+    android:textAlignment="center" />
+
+<RadioButton
+    android:id="@+id/NotificationsBtn"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:text=" Set Notifications On" />
+
+<RadioButton
+    android:id="@+id/persistComplete"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:text=" Persists Until Complete" />
+
+    <RadioButton
+        android:id="@+id/completeToDo"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:text=" Check ToDo as Completed" />
+
+
+    <TextView
+        android:id="@+id/TitleTime"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:text="EVENT TIME"
+        android:textAlignment="center"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/eventDateInput"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="yyyy-MM-dd"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/eventTimeInput"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="HH:mm:ss"
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/updateEventBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#C85353"
+        android:text="UPDATE" />
+
+    <Button
+        android:id="@+id/deleteEventBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#C85353"
+        android:text="DELETE" />
+
+
+</LinearLayout>

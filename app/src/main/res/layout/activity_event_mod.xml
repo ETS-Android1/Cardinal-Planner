@@ -26,6 +26,22 @@
         android:gravity="center"
         android:inputType="text"
         android:text="Name" />
+    <EditText
+        android:id="@+id/eventCategoryInput"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="text"
+        android:text="Category" />
+    <EditText
+        android:id="@+id/meetingLinkInput"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Meeting Link"
+        android:textAlignment="center" />
 
     <EditText
         android:id="@+id/DescriptionInput"

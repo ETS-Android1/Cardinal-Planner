@@ -26,6 +26,8 @@ public class EventMgmt extends AppCompatActivity {
     RecyclerView eventList;
     private FirestoreRecyclerAdapter<Events, EventViewHolder> adapter;
     DocumentSnapshot snapshot;
+    String dbKey;
+    private onItemClickListener listener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,15 +49,7 @@ public class EventMgmt extends AppCompatActivity {
                 holder.listName.setText(model.getName());
                 holder.listDate.setText(model.getDate() + "");
                 DocumentSnapshot snapshot = options.getSnapshots().getSnapshot(position);
-                String dbKey = snapshot.getId();
-                holder.listName.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        Intent modifyEvent = new Intent(EventMgmt.this, EventMod.class);
-                        modifyEvent.putExtra("key", dbKey);
-                        startActivity(modifyEvent);
-                    }
-                });
+                dbKey = snapshot.getId();
 
             }
 
@@ -71,7 +65,6 @@ public class EventMgmt extends AppCompatActivity {
 
     }
 
-
     private class EventViewHolder extends RecyclerView.ViewHolder {
         //private View view;
         private TextView listName;
@@ -81,7 +74,23 @@ public class EventMgmt extends AppCompatActivity {
             super(itemView);
             listName = itemView.findViewById(R.id.list_name);
             listDate = itemView.findViewById(R.id.list_date);
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent modifyEvent = new Intent(EventMgmt.this, EventMod.class);
+                    modifyEvent.putExtra("key", dbKey);
+                    startActivity(modifyEvent);
+                }
+            });
         }
+    }
+
+    public interface onItemClickListener {
+        void onItemClick(DocumentSnapshot documentSnapshot, int position);
+    }
+
+    public void onItemClickListener(onItemClickListener listener) {
+        this.listener = listener;
     }
 
     @Override
@@ -98,10 +107,5 @@ public class EventMgmt extends AppCompatActivity {
             adapter.stopListening();
         }
     }
-
-
-
-
-
 
 }

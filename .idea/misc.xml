@@ -12,9 +12,11 @@
         <entry key="app/src/main/res/layout/activity_event_mgmt.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_event_mod.xml" value="0.15896739130434784" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/activity_mgmt_to_dos.xml" value="0.17391304347826086" />
         <entry key="app/src/main/res/layout/activity_to_do_mgmt.xml" value="0.1503623188405797" />
+        <entry key="app/src/main/res/layout/activity_to_do_mod.xml" value="0.17391304347826086" />
         <entry key="app/src/main/res/layout/activity_user_mgmt.xml" value="0.25" />
-        <entry key="app/src/main/res/layout/list_items_single.xml" value="0.335" />
+        <entry key="app/src/main/res/layout/list_items_single.xml" value="0.1" />
       </map>
     </option>
   </component>

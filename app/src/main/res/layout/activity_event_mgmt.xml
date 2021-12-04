@@ -20,5 +20,6 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/events_recycler"
         android:layout_width="409dp"
-        android:layout_height="729dp" />
+        android:layout_height="729dp"
+        android:background="#DDD9D9" />
 </LinearLayout>

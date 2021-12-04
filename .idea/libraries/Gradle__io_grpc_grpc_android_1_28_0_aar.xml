@@ -4,9 +4,6 @@
       <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/grpc-android-1.28.0.aar/7510915ec2678293e5d67447263e5606/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/grpc-android-1.28.0.aar/7510915ec2678293e5d67447263e5606/res" />
       <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/grpc-android-1.28.0.aar/7510915ec2678293e5d67447263e5606/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/grpc-android-1.28.0.aar/7dd7f85272d0bd8578d8b47ce609af42/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/grpc-android-1.28.0.aar/7dd7f85272d0bd8578d8b47ce609af42/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/grpc-android-1.28.0.aar/7dd7f85272d0bd8578d8b47ce609af42/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
