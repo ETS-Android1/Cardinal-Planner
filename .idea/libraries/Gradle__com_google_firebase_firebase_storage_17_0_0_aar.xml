@@ -4,6 +4,9 @@
       <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/jetified-firebase-storage-17.0.0.aar/6488c826400906013510486f9a490154/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/jetified-firebase-storage-17.0.0.aar/6488c826400906013510486f9a490154/res" />
       <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/jetified-firebase-storage-17.0.0.aar/6488c826400906013510486f9a490154/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-firebase-storage-17.0.0.aar/bd6f077b454a0f77baac0f25f43817ae/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-firebase-storage-17.0.0.aar/bd6f077b454a0f77baac0f25f43817ae/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-firebase-storage-17.0.0.aar/bd6f077b454a0f77baac0f25f43817ae/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

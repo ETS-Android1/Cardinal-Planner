@@ -4,6 +4,9 @@
       <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/slidingpanelayout-1.0.0.aar/bc1a54d760538b948401ec09ac4688d9/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/slidingpanelayout-1.0.0.aar/bc1a54d760538b948401ec09ac4688d9/res" />
       <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/slidingpanelayout-1.0.0.aar/bc1a54d760538b948401ec09ac4688d9/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-1.0.0.aar/dbeee06be93b9a44f82223dfc0360afb/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-1.0.0.aar/dbeee06be93b9a44f82223dfc0360afb/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/slidingpanelayout-1.0.0.aar/dbeee06be93b9a44f82223dfc0360afb/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

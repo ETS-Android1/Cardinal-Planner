@@ -2,6 +2,7 @@
   <library name="Gradle: androidx.constraintlayout:constraintlayout-core:1.0.1">
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../.gradle/caches/modules-2/files-2.1/androidx.constraintlayout/constraintlayout-core/1.0.1/ad1ed3dbace8adc395d1d09cca7771f5ca592f7b/constraintlayout-core-1.0.1.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.constraintlayout/constraintlayout-core/1.0.1/ad1ed3dbace8adc395d1d09cca7771f5ca592f7b/constraintlayout-core-1.0.1.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
