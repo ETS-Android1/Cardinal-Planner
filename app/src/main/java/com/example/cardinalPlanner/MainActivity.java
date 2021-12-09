@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseFirestore mFirestore;
     private Query mQuery;
     private MainActivityViewModel mViewModel;
-    private Button userInfo,logout, events, todo, eventMgmt, toDoMgmt, voiceCommand;
+    private Button userInfo,logout, events, todo, eventMgmt, toDoMgmt, voiceCommand, shareMenu;
     public ListView voiceList;
 
 
@@ -99,7 +99,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(toDOMgmt);
             }
         });
-
+        shareMenu = (Button) findViewById(R.id.shareBtn);
+        shareMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startShare();
+            }
+        });
         voiceCommand = (Button) findViewById(R.id.voiceCommandBtn);
         voiceList = (ListView) findViewById(R.id.speechList);
 
@@ -124,6 +130,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void startShare(){
+        Intent sendIntent = new Intent();
+        sendIntent.setAction(Intent.ACTION_SEND);
+        sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
+        sendIntent.setType("text/plain");
+
+        Intent shareIntent = Intent.createChooser(sendIntent, null);
+        startActivity(shareIntent);
+    }
 
     public void startVoiceCommandActivity(){
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
