@@ -3,6 +3,7 @@
     <ANNOTATIONS>
       <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/recyclerview-1.2.1.aar/0479f5ac262aecab4b41a4bd000b2798/annotations.zip!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/recyclerview-1.2.1.aar/0bea856307cc102532a4e7d259f35c5f/annotations.zip!/" />
+      <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/recyclerview-1.2.1.aar/657294070680909574e2e7044a00194c/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/recyclerview-1.2.1.aar/0479f5ac262aecab4b41a4bd000b2798/jars/classes.jar!/" />
@@ -11,6 +12,9 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/recyclerview-1.2.1.aar/0bea856307cc102532a4e7d259f35c5f/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/recyclerview-1.2.1.aar/0bea856307cc102532a4e7d259f35c5f/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/recyclerview-1.2.1.aar/0bea856307cc102532a4e7d259f35c5f/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/recyclerview-1.2.1.aar/657294070680909574e2e7044a00194c/res" />
+      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/recyclerview-1.2.1.aar/657294070680909574e2e7044a00194c/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/recyclerview-1.2.1.aar/657294070680909574e2e7044a00194c/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

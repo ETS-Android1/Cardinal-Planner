@@ -7,6 +7,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-auth-19.2.0.aar/343ff5d31b76447a9fc3ab3725fe1a93/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-auth-19.2.0.aar/343ff5d31b76447a9fc3ab3725fe1a93/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-auth-19.2.0.aar/343ff5d31b76447a9fc3ab3725fe1a93/res" />
+      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/play-services-auth-19.2.0.aar/807fd957cb0e5710d7c496de1a0ed8eb/AndroidManifest.xml" />
+      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/play-services-auth-19.2.0.aar/807fd957cb0e5710d7c496de1a0ed8eb/res" />
+      <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/play-services-auth-19.2.0.aar/807fd957cb0e5710d7c496de1a0ed8eb/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

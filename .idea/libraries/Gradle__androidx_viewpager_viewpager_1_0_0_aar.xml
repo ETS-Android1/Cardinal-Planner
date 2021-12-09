@@ -7,6 +7,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/viewpager-1.0.0.aar/ff75e7da8cf1d90aa12362b66f7e555c/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/viewpager-1.0.0.aar/ff75e7da8cf1d90aa12362b66f7e555c/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/viewpager-1.0.0.aar/ff75e7da8cf1d90aa12362b66f7e555c/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/viewpager-1.0.0.aar/96a3d8f63c01d6f0d35bd43c899b50ae/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/viewpager-1.0.0.aar/96a3d8f63c01d6f0d35bd43c899b50ae/res" />
+      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/viewpager-1.0.0.aar/96a3d8f63c01d6f0d35bd43c899b50ae/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

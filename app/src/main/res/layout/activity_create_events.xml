@@ -24,8 +24,8 @@
         android:layout_height="55dp"
         android:ems="10"
         android:gravity="center"
-        android:inputType="text"
-        android:text="Name" />
+        android:hint="Name"
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/eventCategoryInput"
@@ -33,16 +33,16 @@
         android:layout_height="55dp"
         android:ems="10"
         android:gravity="center"
-        android:inputType="text"
-        android:text="Category" />
+        android:hint="Category"
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/meetingLinkInput"
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:ems="10"
+        android:hint="Meeting Link"
         android:inputType="text"
-        android:text="Meeting Link"
         android:textAlignment="center" />
 
     <EditText
@@ -50,8 +50,8 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:ems="10"
+        android:hint="Description"
         android:inputType="textLongMessage"
-        android:text="Description"
         android:textAlignment="center" />
 
     <RadioButton
@@ -73,8 +73,8 @@
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:ems="10"
+        android:hint="yyyy-MM-dd"
         android:inputType="text"
-        android:text="yyyy-MM-dd"
         android:textAlignment="center" />
 
     <EditText
@@ -82,8 +82,8 @@
         android:layout_width="match_parent"
         android:layout_height="55dp"
         android:ems="10"
+        android:hint="HH:mm:ss"
         android:inputType="text"
-        android:text="HH:mm:ss"
         android:textAlignment="center" />
 
     <Button

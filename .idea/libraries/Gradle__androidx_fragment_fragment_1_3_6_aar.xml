@@ -3,6 +3,7 @@
     <ANNOTATIONS>
       <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/fragment-1.3.6.aar/488efc175de2558164b8e81d55bb310d/annotations.zip!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fragment-1.3.6.aar/0939762928279d79392689edf43b9dca/annotations.zip!/" />
+      <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/fragment-1.3.6.aar/8eed6361cc498c1f8bf133e80ac7e1bf/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/fragment-1.3.6.aar/488efc175de2558164b8e81d55bb310d/jars/classes.jar!/" />
@@ -11,6 +12,9 @@
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fragment-1.3.6.aar/0939762928279d79392689edf43b9dca/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fragment-1.3.6.aar/0939762928279d79392689edf43b9dca/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/fragment-1.3.6.aar/0939762928279d79392689edf43b9dca/res" />
+      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/fragment-1.3.6.aar/8eed6361cc498c1f8bf133e80ac7e1bf/res" />
+      <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/fragment-1.3.6.aar/8eed6361cc498c1f8bf133e80ac7e1bf/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/fragment-1.3.6.aar/8eed6361cc498c1f8bf133e80ac7e1bf/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

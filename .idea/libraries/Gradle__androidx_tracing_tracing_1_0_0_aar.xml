@@ -7,6 +7,9 @@
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/tracing-1.0.0.aar/2e1f5d351b48ac3a4859113778261275/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/tracing-1.0.0.aar/2e1f5d351b48ac3a4859113778261275/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/tracing-1.0.0.aar/2e1f5d351b48ac3a4859113778261275/jars/classes.jar!/" />
+      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/tracing-1.0.0.aar/dff480c7f441f02be46d8fc14dadd20d/res" />
+      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/tracing-1.0.0.aar/dff480c7f441f02be46d8fc14dadd20d/AndroidManifest.xml" />
+      <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/tracing-1.0.0.aar/dff480c7f441f02be46d8fc14dadd20d/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
