@@ -3,6 +3,7 @@ package com.example.cardinalPlanner.Events;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -29,7 +30,7 @@ public class EventMod extends AppCompatActivity {
     private EditText NameInput, dateInput, timeInput,meetingLinkInput, categoryInput, descriptionInput;
     private RadioButton notificationsBtn;
     private boolean notifications = false;
-    private Button finish, delete;
+    private Button finish, delete,visitLink;
     private static final SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
     private String docID;
     private FirebaseFirestore ref;
@@ -80,6 +81,15 @@ public class EventMod extends AppCompatActivity {
                 } else {
                     Toast.makeText(EventMod.this, "Document does not exist", Toast.LENGTH_LONG).show();
                 }
+            }
+        });
+        visitLink = findViewById(R.id.visitLinkBtn);
+        visitLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri uri = Uri.parse("http://" + meetingLinkInput.getText().toString()); // missing 'http://' will cause crashed
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
             }
         });
 

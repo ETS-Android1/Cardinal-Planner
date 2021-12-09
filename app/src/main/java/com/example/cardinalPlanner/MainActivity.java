@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseFirestore mFirestore;
     private Query mQuery;
     private MainActivityViewModel mViewModel;
-    private Button userInfo,logout, events, todo, eventMgmt, toDoMgmt, voiceCommand, shareMenu;
+    private Button userInfo,logout, events, todo, eventMgmt, toDoMgmt, voiceCommand, shareMenu, viewPlan;
     public ListView voiceList;
 
 
@@ -106,6 +106,7 @@ public class MainActivity extends AppCompatActivity {
                 startShare();
             }
         });
+
         voiceCommand = (Button) findViewById(R.id.voiceCommandBtn);
         voiceList = (ListView) findViewById(R.id.speechList);
 

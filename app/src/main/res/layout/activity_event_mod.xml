@@ -45,6 +45,12 @@
         android:inputType="text"
         android:textAlignment="center" />
 
+    <Button
+        android:id="@+id/visitLinkBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Visit Link" />
+
     <EditText
         android:id="@+id/DescriptionInput"
         android:layout_width="match_parent"
