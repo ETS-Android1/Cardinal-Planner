@@ -141,6 +141,7 @@ public class ToDoMod extends AppCompatActivity {
                     Date newDate = getDateFromString(timestamp);
                     toDoItem.setDate(newDate);
                 }
+
                 toDoItem.setName(NameInput.getText().toString());
                 toDoItem.setDescription(descriptionInput.getText().toString());
                 toDoItem.setNotification(notifications);

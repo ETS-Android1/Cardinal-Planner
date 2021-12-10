@@ -22,6 +22,7 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class ToDoMgmt extends AppCompatActivity {
@@ -34,6 +35,7 @@ public class ToDoMgmt extends AppCompatActivity {
     private FirestoreRecyclerAdapter<ToDo, ToDoMgmt.ToDoViewHolder> adapter;
     DocumentSnapshot snapshot;
     String dbKey;
+    ArrayList<String> items = new ArrayList<String>();
     private ToDoMgmt.onItemClickListener listener;
 
     @Override
@@ -107,7 +109,8 @@ public class ToDoMgmt extends AppCompatActivity {
                 holder.listName.setText(model.getName());
                 holder.listDate.setText(model.getDate() + "");
                 DocumentSnapshot snapshot = options.getSnapshots().getSnapshot(position);
-                dbKey = snapshot.getId();
+                items.add(snapshot.getId());
+                //dbKey = snapshot.getId();
             }
 
             @NonNull
@@ -133,8 +136,10 @@ public class ToDoMgmt extends AppCompatActivity {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    int itemPosition = getLayoutPosition();
+                    String thing = items.get(itemPosition);
                     Intent modifyEvent = new Intent(ToDoMgmt.this, ToDoMod.class);
-                    modifyEvent.putExtra("key", dbKey);
+                    modifyEvent.putExtra("key", thing);
                     startActivity(modifyEvent);
                 }
             });
