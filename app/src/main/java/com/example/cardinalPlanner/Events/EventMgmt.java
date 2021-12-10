@@ -7,10 +7,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.cardinalPlanner.R;
 import com.example.cardinalPlanner.model.Events;
@@ -20,13 +22,18 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
 
+import java.util.ArrayList;
+
 public class EventMgmt extends AppCompatActivity {
+    private static final String TAG = "EventMgmt";
+
     FirebaseFirestore ref;
     Query query;
     RecyclerView eventList;
     private FirestoreRecyclerAdapter<Events, EventViewHolder> adapter;
     DocumentSnapshot snapshot;
     String dbKey;
+    ArrayList<String> items = new ArrayList<String>();
     private onItemClickListener listener;
 
     @Override
@@ -50,6 +57,8 @@ public class EventMgmt extends AppCompatActivity {
                 holder.listDate.setText(model.getDate() + "");
                 DocumentSnapshot snapshot = options.getSnapshots().getSnapshot(position);
                 dbKey = snapshot.getId();
+                items.add(snapshot.getId());
+                Log.i(TAG, position + " : " + dbKey);
 
             }
 
@@ -62,7 +71,6 @@ public class EventMgmt extends AppCompatActivity {
         };
         eventList.setHasFixedSize(true);
         eventList.setAdapter(adapter);
-
     }
 
     private class EventViewHolder extends RecyclerView.ViewHolder {
@@ -77,13 +85,21 @@ public class EventMgmt extends AppCompatActivity {
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    int itemPosition = getLayoutPosition();
+                    String tt = "" + items.size();
+                    String thing = items.get(itemPosition);
                     Intent modifyEvent = new Intent(EventMgmt.this, EventMod.class);
-                    modifyEvent.putExtra("key", dbKey);
+                    modifyEvent.putExtra("key", thing);
+                    //Log.i(TAG, tt + " : " + dbKey);
+                    Toast.makeText(EventMgmt.this, tt,
+                            Toast.LENGTH_SHORT).show();
                     startActivity(modifyEvent);
                 }
             });
         }
     }
+
+
 
     public interface onItemClickListener {
         void onItemClick(DocumentSnapshot documentSnapshot, int position);

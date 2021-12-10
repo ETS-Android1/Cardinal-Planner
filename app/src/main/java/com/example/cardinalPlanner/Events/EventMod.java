@@ -59,6 +59,8 @@ public class EventMod extends AppCompatActivity {
 
         ref = FirebaseFirestore.getInstance();
         String path = docID;
+//        Toast.makeText(EventMod.this, docID,
+//                Toast.LENGTH_LONG).show();
         document = ref.collection("Event").document(path);
 
         document.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
