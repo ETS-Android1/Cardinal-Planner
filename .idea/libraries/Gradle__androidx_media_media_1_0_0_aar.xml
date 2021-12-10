@@ -4,6 +4,7 @@
       <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/media-1.0.0.aar/32654bb0c3a221cef14de79908fec1fe/annotations.zip!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/media-1.0.0.aar/e19c0ca02a628af129a5606d1ff90e02/annotations.zip!/" />
       <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/media-1.0.0.aar/3f5a200a59214a5c64d92893fce320d5/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/media-1.0.0.aar/2b6b9216bf810c99757044876a379778/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/media-1.0.0.aar/32654bb0c3a221cef14de79908fec1fe/jars/classes.jar!/" />
@@ -15,6 +16,9 @@
       <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/media-1.0.0.aar/3f5a200a59214a5c64d92893fce320d5/AndroidManifest.xml" />
       <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/media-1.0.0.aar/3f5a200a59214a5c64d92893fce320d5/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/media-1.0.0.aar/3f5a200a59214a5c64d92893fce320d5/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/media-1.0.0.aar/2b6b9216bf810c99757044876a379778/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/media-1.0.0.aar/2b6b9216bf810c99757044876a379778/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/media-1.0.0.aar/2b6b9216bf810c99757044876a379778/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

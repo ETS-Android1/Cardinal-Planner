@@ -10,6 +10,9 @@
       <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/asynclayoutinflater-1.0.0.aar/39abfcf1e093f3ca93dbd22fd36711f6/res" />
       <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/asynclayoutinflater-1.0.0.aar/39abfcf1e093f3ca93dbd22fd36711f6/AndroidManifest.xml" />
       <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/asynclayoutinflater-1.0.0.aar/39abfcf1e093f3ca93dbd22fd36711f6/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-1.0.0.aar/7ebd5a9d9082d118ea8960ee0bbec882/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-1.0.0.aar/7ebd5a9d9082d118ea8960ee0bbec882/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/asynclayoutinflater-1.0.0.aar/7ebd5a9d9082d118ea8960ee0bbec882/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

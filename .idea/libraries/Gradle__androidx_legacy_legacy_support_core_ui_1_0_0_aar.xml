@@ -10,6 +10,9 @@
       <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/legacy-support-core-ui-1.0.0.aar/67db2334c8d2c7f34cff571e0bc75b91/res" />
       <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/legacy-support-core-ui-1.0.0.aar/67db2334c8d2c7f34cff571e0bc75b91/AndroidManifest.xml" />
       <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/legacy-support-core-ui-1.0.0.aar/67db2334c8d2c7f34cff571e0bc75b91/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/legacy-support-core-ui-1.0.0.aar/a3d959fe6c418d872a368c9c4154c225/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/legacy-support-core-ui-1.0.0.aar/a3d959fe6c418d872a368c9c4154c225/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/legacy-support-core-ui-1.0.0.aar/a3d959fe6c418d872a368c9c4154c225/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

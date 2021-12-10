@@ -4,6 +4,7 @@
       <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0.aar/a3ab7b73e829b41de8a9aa6b96440a75/annotations.zip!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0.aar/632cb14e14628193318ee29ab987674b/annotations.zip!/" />
       <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0.aar/cdfbdcad70164001dad8f0c029c4e41c/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0.aar/17cdf10ba4a45cf5f96842aa92fefc3a/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0.aar/a3ab7b73e829b41de8a9aa6b96440a75/jars/classes.jar!/" />
@@ -15,6 +16,9 @@
       <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0.aar/cdfbdcad70164001dad8f0c029c4e41c/res" />
       <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0.aar/cdfbdcad70164001dad8f0c029c4e41c/AndroidManifest.xml" />
       <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0.aar/cdfbdcad70164001dad8f0c029c4e41c/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0.aar/17cdf10ba4a45cf5f96842aa92fefc3a/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0.aar/17cdf10ba4a45cf5f96842aa92fefc3a/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/swiperefreshlayout-1.0.0.aar/17cdf10ba4a45cf5f96842aa92fefc3a/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

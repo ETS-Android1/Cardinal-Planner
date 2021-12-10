@@ -10,6 +10,9 @@
       <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/navigation-common-2.3.5.aar/29594c90199b724537f93eadc00b11b6/AndroidManifest.xml" />
       <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/navigation-common-2.3.5.aar/29594c90199b724537f93eadc00b11b6/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/navigation-common-2.3.5.aar/29594c90199b724537f93eadc00b11b6/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/navigation-common-2.3.5.aar/c3b8cd36695d485007c2e1fe33d12a17/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/navigation-common-2.3.5.aar/c3b8cd36695d485007c2e1fe33d12a17/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/navigation-common-2.3.5.aar/c3b8cd36695d485007c2e1fe33d12a17/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

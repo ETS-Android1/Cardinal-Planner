@@ -10,6 +10,9 @@
       <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/play-services-safetynet-17.0.0.aar/e4c2ef35d969e665293dace22c8850c2/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/play-services-safetynet-17.0.0.aar/e4c2ef35d969e665293dace22c8850c2/res" />
       <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/play-services-safetynet-17.0.0.aar/e4c2ef35d969e665293dace22c8850c2/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-safetynet-17.0.0.aar/ac8892efad5be937647553caccc07984/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-safetynet-17.0.0.aar/ac8892efad5be937647553caccc07984/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-safetynet-17.0.0.aar/ac8892efad5be937647553caccc07984/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

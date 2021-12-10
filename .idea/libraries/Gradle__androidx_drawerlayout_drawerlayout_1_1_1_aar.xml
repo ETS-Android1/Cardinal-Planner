@@ -4,6 +4,7 @@
       <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/drawerlayout-1.1.1.aar/b6b1c26748877fe59ebbe001d5c19466/annotations.zip!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/drawerlayout-1.1.1.aar/5c2d807c8f371a2bbd0720a03de955db/annotations.zip!/" />
       <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/drawerlayout-1.1.1.aar/fbd205e1c2804db1a06465982d682433/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/drawerlayout-1.1.1.aar/275a23bb797928106482316ad8cd87c0/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
       <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/drawerlayout-1.1.1.aar/b6b1c26748877fe59ebbe001d5c19466/jars/classes.jar!/" />
@@ -15,6 +16,9 @@
       <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/drawerlayout-1.1.1.aar/fbd205e1c2804db1a06465982d682433/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/drawerlayout-1.1.1.aar/fbd205e1c2804db1a06465982d682433/AndroidManifest.xml" />
       <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/drawerlayout-1.1.1.aar/fbd205e1c2804db1a06465982d682433/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/drawerlayout-1.1.1.aar/275a23bb797928106482316ad8cd87c0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/drawerlayout-1.1.1.aar/275a23bb797928106482316ad8cd87c0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/drawerlayout-1.1.1.aar/275a23bb797928106482316ad8cd87c0/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

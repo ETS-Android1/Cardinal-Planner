@@ -10,6 +10,9 @@
       <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/jetified-firebase-common-20.0.0.aar/5ac1b6c5a7ec7abde699b54c2a49cfec/res" />
       <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/jetified-firebase-common-20.0.0.aar/5ac1b6c5a7ec7abde699b54c2a49cfec/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/jetified-firebase-common-20.0.0.aar/5ac1b6c5a7ec7abde699b54c2a49cfec/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-20.0.0.aar/b146bf97697843c9974063e82d9d2d19/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-20.0.0.aar/b146bf97697843c9974063e82d9d2d19/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-firebase-common-20.0.0.aar/b146bf97697843c9974063e82d9d2d19/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -10,6 +10,9 @@
       <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/appcompat-resources-1.3.1.aar/bb600f5f6c75ebebf75b25f68cf9a49c/jars/classes.jar!/" />
       <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/appcompat-resources-1.3.1.aar/bb600f5f6c75ebebf75b25f68cf9a49c/res" />
       <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/appcompat-resources-1.3.1.aar/bb600f5f6c75ebebf75b25f68cf9a49c/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompat-resources-1.3.1.aar/7f6cf35779682828e6380569ebe6e088/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompat-resources-1.3.1.aar/7f6cf35779682828e6380569ebe6e088/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/appcompat-resources-1.3.1.aar/7f6cf35779682828e6380569ebe6e088/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

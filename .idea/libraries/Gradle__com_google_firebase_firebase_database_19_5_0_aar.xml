@@ -10,6 +10,9 @@
       <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/firebase-database-19.5.0.aar/806f58169d14294f97a6ee8ce85b7db0/AndroidManifest.xml" />
       <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/firebase-database-19.5.0.aar/806f58169d14294f97a6ee8ce85b7db0/res" />
       <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/firebase-database-19.5.0.aar/806f58169d14294f97a6ee8ce85b7db0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-database-19.5.0.aar/c4bf0f3e92e175c5bb64f3ac80cede20/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-database-19.5.0.aar/c4bf0f3e92e175c5bb64f3ac80cede20/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/firebase-database-19.5.0.aar/c4bf0f3e92e175c5bb64f3ac80cede20/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
