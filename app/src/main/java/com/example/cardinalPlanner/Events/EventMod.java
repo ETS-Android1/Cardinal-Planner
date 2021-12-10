@@ -105,9 +105,16 @@ public class EventMod extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String timestamp = dateInput.getText().toString() + "_" + timeInput.getText().toString();
-                Date date = getDateFromString(timestamp);
-                event.setDate(date);
+                if ( (dateInput.getText().toString().equals(""))
+                        &&  ( timeInput.getText().toString().equals("") ) ) {
+                    event.setDate(date);
+                } else {
+                    String timestamp = dateInput.getText().toString() + "_" + timeInput.getText().toString();
+                    Date newDate = getDateFromString(timestamp);
+                    event.setDate(newDate);
+                }
+//                String timestamp = dateInput.getText().toString() + "_" + timeInput.getText().toString();
+//                Date date = getDateFromString(timestamp);
                 event.setName(NameInput.getText().toString());
                 event.setCategory(categoryInput.getText().toString());
                 event.setDescription(descriptionInput.getText().toString());

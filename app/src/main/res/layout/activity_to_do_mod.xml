@@ -25,7 +25,7 @@ tools:context=".ToDoMod">
     android:ems="10"
     android:gravity="center"
     android:inputType="text"
-    android:text="Name" />
+    android:hint="Name" />
 
 <EditText
     android:id="@+id/DescriptionInput"
@@ -33,7 +33,7 @@ tools:context=".ToDoMod">
     android:layout_height="100dp"
     android:ems="10"
     android:inputType="textLongMessage"
-    android:text="Description"
+    android:hint="Description"
     android:textAlignment="center" />
 
 <RadioButton
@@ -69,7 +69,7 @@ tools:context=".ToDoMod">
         android:layout_height="55dp"
         android:ems="10"
         android:inputType="text"
-        android:text="yyyy-MM-dd"
+        android:hint="yyyy-MM-dd"
         android:textAlignment="center" />
 
     <EditText
@@ -78,7 +78,7 @@ tools:context=".ToDoMod">
         android:layout_height="55dp"
         android:ems="10"
         android:inputType="text"
-        android:text="HH:mm:ss"
+        android:hint="HH:mm:ss"
         android:textAlignment="center" />
 
     <Button

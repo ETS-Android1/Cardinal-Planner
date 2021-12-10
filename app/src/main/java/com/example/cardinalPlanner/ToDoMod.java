@@ -106,14 +106,16 @@ public class ToDoMod extends AppCompatActivity {
         finish.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if ( (dateInput.getText().toString().equals("yyyy-MM-dd"))
-                        &&  ( timeInput.getText().toString().equals("HH:mm:ss") ) ) {
+
+                if ( (dateInput.getText().toString().equals(""))
+                        &&  ( timeInput.getText().toString().equals("") ) ) {
                     toDoItem.setDate(date);
                 } else {
                     String timestamp = dateInput.getText().toString() + "_" + timeInput.getText().toString();
                     Date newDate = getDateFromString(timestamp);
                     toDoItem.setDate(newDate);
                 }
+               
                 toDoItem.setName(NameInput.getText().toString());
                 toDoItem.setDescription(descriptionInput.getText().toString());
                 toDoItem.setNotification(notifications);
