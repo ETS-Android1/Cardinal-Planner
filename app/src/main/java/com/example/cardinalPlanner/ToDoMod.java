@@ -49,7 +49,7 @@ public class ToDoMod extends AppCompatActivity {
     private String name, description;
     private Date date;
     private String TAG= "CreateToDo";
-    private Long notificationTime;
+    private long notificationTime;
     private NotificationManagerCompat nm;
 
     @Override
@@ -83,6 +83,7 @@ public class ToDoMod extends AppCompatActivity {
                     name = toDoItem.getName();
                     description = toDoItem.getDescription();
                     date = toDoItem.getDate();
+                    Log.d(TAG, "onSuccess: " + date);
                     NameInput.setText(name);
                     descriptionInput.setText(description);
                     timestamp.setText("Event Time\n" + "Set date: " + date);
@@ -135,6 +136,13 @@ public class ToDoMod extends AppCompatActivity {
                     Log.d(TAG, "onClick: Finish, sedding notication");
                     sendOnChannelOne();
                 }
+                if(completeToDo){
+                    Calendar calendar = Calendar.getInstance();
+                    calendar.setTime(date);
+                    notificationTime = calendar.getTimeInMillis();
+                    Log.d(TAG, "onClick: Canceling Recurring notification with id: " + Integer.toString((int)(notificationTime/1000)));
+                    nm.cancel((int)(notificationTime/1000));
+                }
                 if ( (dateInput.getText().toString().equals("yyyy-MM-dd"))
                         &&  ( timeInput.getText().toString().equals("HH:mm:ss") ) ) {
                     toDoItem.setDate(date);
@@ -157,6 +165,11 @@ public class ToDoMod extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 document.delete();
+                Calendar calendar = Calendar.getInstance();
+                calendar.setTime(date);
+                notificationTime = calendar.getTimeInMillis();
+                Log.d(TAG, "onClick: Canceling Recurring notification with id: " + Integer.toString((int)(notificationTime/1000)));
+                nm.cancel((int)(notificationTime/1000));
                 Intent goBack = new Intent(ToDoMod.this, ToDoMgmt.class);
                 startActivity(goBack);
             }
@@ -179,9 +192,9 @@ public class ToDoMod extends AppCompatActivity {
     }
     private void sendOnChannelOne(){
         Log.d(TAG, "sendOnChannelOne: Setting up notification");
-        Intent newI = new Intent(getApplicationContext(),ToDoMgmt.class);
-        PendingIntent pend = PendingIntent.getActivity(getApplicationContext(),0,newI,0);
-        Notification notification = new NotificationCompat.Builder(this,CHANNEL_1_ID)
+        Intent newI = new Intent(getApplicationContext(), ToDoMgmt.class);
+        PendingIntent pend = PendingIntent.getActivity(getApplicationContext(), 0, newI, 0);
+        Notification notification = new NotificationCompat.Builder(this, CHANNEL_1_ID)
                 .setSmallIcon(R.drawable.ic_launcher)
                 .setContentTitle("TODO: " + NameInput.getText().toString())
                 .setContentText("Description: " + descriptionInput.getText().toString())
@@ -194,5 +207,6 @@ public class ToDoMod extends AppCompatActivity {
                 .build();
         nm.notify(NOTIFID, notification);
         NOTIFID++;
+
     }
 }

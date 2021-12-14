@@ -8,6 +8,7 @@ import android.app.AlarmManager;
 import android.app.Notification;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -40,7 +41,7 @@ public class CreateToDo extends AppCompatActivity {
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     static final SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
     private String TAG= "CreateToDo";
-    private Long notificationTime;
+    private long notificationTime;
     private NotificationManagerCompat nm;
     private int NOTIFID = 0;
 
@@ -100,15 +101,25 @@ public class CreateToDo extends AppCompatActivity {
     }
     private void sendOnChannelOne(){
         Log.d(TAG, "sendOnChannelOne: Setting up notification");
-        if(PUC){
-            Log.d(TAG, "sendOnChannelOne: Adding alarm receiver");
-            Intent intent1 = new Intent(CreateToDo.this, AlarmReciver.class);
-            PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 0,intent1, PendingIntent.FLAG_UPDATE_CURRENT);
-            AlarmManager am = (AlarmManager) CreateToDo.this.getSystemService(CreateToDo.this.ALARM_SERVICE);
-            am.setRepeating(AlarmManager.RTC_WAKEUP, notificationTime, AlarmManager.INTERVAL_DAY, pendingIntent);
-        }
+
             Intent newI = new Intent(getApplicationContext(), ToDoMgmt.class);
             PendingIntent pend = PendingIntent.getActivity(getApplicationContext(), 0, newI, 0);
+        if(PUC){
+            Notification notification = new NotificationCompat.Builder(this, CHANNEL_1_ID)
+                    .setSmallIcon(R.drawable.ic_launcher)
+                    .setContentTitle("TODO: " + NameInput.getText().toString())
+                    .setContentText("Description: " + descriptionInput.getText().toString())
+                    .setContentIntent(pend)
+                    .setWhen(notificationTime)
+                    .setPriority(NotificationCompat.PRIORITY_MAX)
+                    .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+                    .setOnlyAlertOnce(false)
+                    .setShowWhen(true)
+                    .setOngoing(true)
+                    .build();
+            Log.d(TAG, "sendOnChannelOne: Creating Recurring notification with id: " +  Integer.toString((int)(notificationTime/1000)));
+            nm.notify((int)(notificationTime/1000), notification);
+        }else {
             Notification notification = new NotificationCompat.Builder(this, CHANNEL_1_ID)
                     .setSmallIcon(R.drawable.ic_launcher)
                     .setContentTitle("TODO: " + NameInput.getText().toString())
@@ -120,8 +131,10 @@ public class CreateToDo extends AppCompatActivity {
                     .setOnlyAlertOnce(false)
                     .setShowWhen(true)
                     .build();
-            nm.notify(NOTIFID, notification);
-            NOTIFID++;
+
+            nm.notify((int)notificationTime, notification);
+        }
+
     }
     /**
      * Convert String entered from user in the app to a Date to be passed to the firestore database
