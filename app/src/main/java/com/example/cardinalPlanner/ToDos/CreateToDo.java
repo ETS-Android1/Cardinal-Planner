@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
+import android.app.AlarmManager;
 import android.app.Notification;
+import android.app.PendingIntent;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -13,7 +16,9 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
+import com.example.cardinalPlanner.AlarmReciver;
 import com.example.cardinalPlanner.R;
+import com.example.cardinalPlanner.ToDoMgmt;
 import com.example.cardinalPlanner.model.ToDo;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -37,6 +42,7 @@ public class CreateToDo extends AppCompatActivity {
     private String TAG= "CreateToDo";
     private Long notificationTime;
     private NotificationManagerCompat nm;
+    private int NOTIFID = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -94,15 +100,28 @@ public class CreateToDo extends AppCompatActivity {
     }
     private void sendOnChannelOne(){
         Log.d(TAG, "sendOnChannelOne: Setting up notification");
-        Notification notification = new NotificationCompat.Builder(this,CHANNEL_1_ID)
-                .setSmallIcon(R.drawable.ic_android_black_24dp)
-                .setContentTitle("Event:" + NameInput.getText().toString())
-                .setContentText("Description:" + descriptionInput.getText().toString())
-                .setWhen(notificationTime)
-                .setPriority(NotificationCompat.PRIORITY_MAX)
-                .setCategory(NotificationCompat.CATEGORY_MESSAGE)
-                .build();
-        nm.notify(1,notification);
+        if(PUC){
+            Log.d(TAG, "sendOnChannelOne: Adding alarm receiver");
+            Intent intent1 = new Intent(CreateToDo.this, AlarmReciver.class);
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(getApplicationContext(), 0,intent1, PendingIntent.FLAG_UPDATE_CURRENT);
+            AlarmManager am = (AlarmManager) CreateToDo.this.getSystemService(CreateToDo.this.ALARM_SERVICE);
+            am.setRepeating(AlarmManager.RTC_WAKEUP, notificationTime, AlarmManager.INTERVAL_DAY, pendingIntent);
+        }
+            Intent newI = new Intent(getApplicationContext(), ToDoMgmt.class);
+            PendingIntent pend = PendingIntent.getActivity(getApplicationContext(), 0, newI, 0);
+            Notification notification = new NotificationCompat.Builder(this, CHANNEL_1_ID)
+                    .setSmallIcon(R.drawable.ic_launcher)
+                    .setContentTitle("TODO: " + NameInput.getText().toString())
+                    .setContentText("Description: " + descriptionInput.getText().toString())
+                    .setContentIntent(pend)
+                    .setWhen(notificationTime)
+                    .setPriority(NotificationCompat.PRIORITY_MAX)
+                    .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+                    .setOnlyAlertOnce(false)
+                    .setShowWhen(true)
+                    .build();
+            nm.notify(NOTIFID, notification);
+            NOTIFID++;
     }
     /**
      * Convert String entered from user in the app to a Date to be passed to the firestore database

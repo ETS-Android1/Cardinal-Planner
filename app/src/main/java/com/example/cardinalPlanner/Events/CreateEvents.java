@@ -25,6 +25,7 @@ import android.widget.Toast;
 import com.example.cardinalPlanner.MainActivity;
 import com.example.cardinalPlanner.R;
 import com.example.cardinalPlanner.model.Events;
+import com.example.cardinalPlanner.model.ToDo;
 import com.example.cardinalPlanner.util.DisplayNotification;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -47,6 +48,8 @@ public class CreateEvents extends AppCompatActivity {
     String TAG = "CreateEvents";
     private NotificationManagerCompat nm;
     private long notificationTime;
+    private int NOTIFID = 0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -102,15 +105,21 @@ public class CreateEvents extends AppCompatActivity {
     }
     private void sendOnChannelOne(){
         Log.d(TAG, "sendOnChannelOne: Setting up notification");
+        Intent newI = new Intent(getApplicationContext(), EventMgmt.class);
+        PendingIntent pend = PendingIntent.getActivity(getApplicationContext(),0,newI,0);
         Notification notification = new NotificationCompat.Builder(this,CHANNEL_1_ID)
-                .setSmallIcon(R.drawable.ic_android_black_24dp)
-                .setContentTitle("Event:" + NameInput.getText().toString())
-                .setContentText("Description:" + descriptionInput.getText().toString())
+                .setSmallIcon(R.drawable.ic_launcher)
+                .setContentTitle("Event: " + NameInput.getText().toString())
+                .setContentText("Description: " + descriptionInput.getText().toString())
+                .setContentIntent(pend)
                 .setWhen(notificationTime)
                 .setPriority(NotificationCompat.PRIORITY_MAX)
                 .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+                .setOnlyAlertOnce(false)
+                .setShowWhen(true)
                 .build();
-        nm.notify(1,notification);
+        nm.notify(NOTIFID, notification);
+        NOTIFID++;
     }
     /**
      * Convert String entered from user in the app to a Date to be passed to the firestore database

@@ -5,6 +5,7 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
 import android.app.Notification;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -32,6 +33,7 @@ import java.util.Date;
 import static com.example.cardinalPlanner.MainApplication.CHANNEL_1_ID;
 
 public class ToDoMod extends AppCompatActivity {
+    private static int NOTIFID = 0;
     private TextView timestamp;
     private EditText NameInput, dateInput, timeInput, descriptionInput;
     private RadioButton notificationsBtn, pucBtn, complete;
@@ -177,14 +179,20 @@ public class ToDoMod extends AppCompatActivity {
     }
     private void sendOnChannelOne(){
         Log.d(TAG, "sendOnChannelOne: Setting up notification");
+        Intent newI = new Intent(getApplicationContext(),ToDoMgmt.class);
+        PendingIntent pend = PendingIntent.getActivity(getApplicationContext(),0,newI,0);
         Notification notification = new NotificationCompat.Builder(this,CHANNEL_1_ID)
-                .setSmallIcon(R.drawable.ic_android_black_24dp)
-                .setContentTitle("Event:" + NameInput.getText().toString())
-                .setContentText("Description:" + descriptionInput.getText().toString())
+                .setSmallIcon(R.drawable.ic_launcher)
+                .setContentTitle("TODO: " + NameInput.getText().toString())
+                .setContentText("Description: " + descriptionInput.getText().toString())
+                .setContentIntent(pend)
                 .setWhen(notificationTime)
                 .setPriority(NotificationCompat.PRIORITY_MAX)
                 .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+                .setOnlyAlertOnce(false)
+                .setShowWhen(true)
                 .build();
-        nm.notify(1,notification);
+        nm.notify(NOTIFID, notification);
+        NOTIFID++;
     }
 }

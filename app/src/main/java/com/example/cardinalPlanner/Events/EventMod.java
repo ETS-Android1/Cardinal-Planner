@@ -5,6 +5,7 @@ import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 
 import android.app.Notification;
+import android.app.PendingIntent;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -18,6 +19,7 @@ import android.widget.Toast;
 
 import com.example.cardinalPlanner.R;
 import com.example.cardinalPlanner.model.Events;
+import com.example.cardinalPlanner.model.ToDo;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
@@ -48,6 +50,7 @@ public class EventMod extends AppCompatActivity {
     private String TAG= "EventMod";
     private Long notificationTime;
     private NotificationManagerCompat nm;
+    private int NOTIFID = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -169,15 +172,21 @@ public class EventMod extends AppCompatActivity {
     }
     private void sendOnChannelOne(){
         Log.d(TAG, "sendOnChannelOne: Setting up notification");
+        Intent newI = new Intent(getApplicationContext(), EventMgmt.class);
+        PendingIntent pend = PendingIntent.getActivity(getApplicationContext(),0,newI,0);
         Notification notification = new NotificationCompat.Builder(this,CHANNEL_1_ID)
-                .setSmallIcon(R.drawable.ic_android_black_24dp)
-                .setContentTitle("Event:" + NameInput.getText().toString())
-                .setContentText("Description:" + descriptionInput.getText().toString())
+                .setSmallIcon(R.drawable.ic_launcher)
+                .setContentTitle("Event: " + NameInput.getText().toString())
+                .setContentText("Description: " + descriptionInput.getText().toString())
+                .setContentIntent(pend)
                 .setWhen(notificationTime)
                 .setPriority(NotificationCompat.PRIORITY_MAX)
                 .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+                .setOnlyAlertOnce(false)
+                .setShowWhen(true)
                 .build();
-        nm.notify(1,notification);
+        nm.notify(NOTIFID, notification);
+        NOTIFID++;
     }
 
 }
