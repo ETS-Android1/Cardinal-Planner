@@ -6,7 +6,7 @@ import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
 import android.media.RingtoneManager;
-import android.net.Uri
+import android.net.Uri;
 
 import androidx.core.app.NotificationCompat;
 
