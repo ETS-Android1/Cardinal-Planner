@@ -18,6 +18,8 @@ import com.example.cardinalPlanner.R;
 import com.example.cardinalPlanner.model.Events;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
@@ -27,6 +29,7 @@ import java.util.ArrayList;
 public class EventMgmt extends AppCompatActivity {
     private static final String TAG = "EventMgmt";
 
+    private String userID;
     FirebaseFirestore ref;
     Query query;
     RecyclerView eventList;
@@ -41,10 +44,12 @@ public class EventMgmt extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_mgmt);
 
+        userID = FirebaseAuth.getInstance().getCurrentUser().getUid();
         eventList = findViewById(R.id.events_recycler);
         eventList.setLayoutManager(new LinearLayoutManager(this));
         ref = FirebaseFirestore.getInstance();
-        query = ref.collection("Event");
+        CollectionReference eventsCol = ref.collection("Event");
+        query = eventsCol.whereEqualTo("userId", userID);
 
         FirestoreRecyclerOptions<Events> options = new FirestoreRecyclerOptions.Builder<Events>()
                 .setQuery(query, Events.class)

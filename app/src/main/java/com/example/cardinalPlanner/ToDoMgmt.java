@@ -18,6 +18,8 @@ import android.widget.TextView;
 import com.example.cardinalPlanner.model.ToDo;
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
@@ -27,6 +29,7 @@ import java.util.Date;
 
 public class ToDoMgmt extends AppCompatActivity {
 
+    private String userID;
     FirebaseFirestore ref;
     Query query;
     RecyclerView eventList;
@@ -43,10 +46,12 @@ public class ToDoMgmt extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_to_do_mgmt);
 
+        userID = FirebaseAuth.getInstance().getCurrentUser().getUid();
         eventList = findViewById(R.id.events_recycler);
         eventList.setLayoutManager(new LinearLayoutManager(this));
         ref = FirebaseFirestore.getInstance();
-        query = ref.collection("toDo");
+        CollectionReference eventsCol = ref.collection("toDo");
+        query = eventsCol.whereEqualTo("userId", userID);
 
         FirestoreRecyclerOptions<ToDo> options = new FirestoreRecyclerOptions.Builder<ToDo>()
                 .setQuery(query, ToDo.class)
