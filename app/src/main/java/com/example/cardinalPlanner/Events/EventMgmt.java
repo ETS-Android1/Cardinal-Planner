@@ -59,10 +59,16 @@ public class EventMgmt extends AppCompatActivity {
         eventList.setLayoutManager(new LinearLayoutManager(this));
         ref = FirebaseFirestore.getInstance();
         CollectionReference eventsCol = ref.collection("Event");
-        query = eventsCol.whereEqualTo("userId", userID);
+//<<<<<<< HEAD
+        //query = eventsCol.whereEqualTo("userId", userID);
         dayBox = findViewById(R.id.dayBoxEvent);
         monthBox = findViewById(R.id.monthBoxEvent);
         yearBox = findViewById(R.id.yearBoxEvent);
+//=======
+        //query = eventsCol.whereEqualTo("userId", userID);
+        query = eventsCol.whereArrayContains("listIDs", userID);
+
+//>>>>>>> cm123
         FirestoreRecyclerOptions<Events> options = new FirestoreRecyclerOptions.Builder<Events>()
                 .setQuery(query, Events.class)
                 .build();
@@ -251,9 +257,6 @@ public class EventMgmt extends AppCompatActivity {
                     String thing = items.get(itemPosition);
                     Intent modifyEvent = new Intent(EventMgmt.this, EventMod.class);
                     modifyEvent.putExtra("key", thing);
-                    //Log.i(TAG, tt + " : " + dbKey);
-                    Toast.makeText(EventMgmt.this, tt,
-                            Toast.LENGTH_SHORT).show();
                     startActivity(modifyEvent);
                 }
             });

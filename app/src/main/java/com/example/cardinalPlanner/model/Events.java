@@ -22,11 +22,12 @@ public class Events {
     private String meetingLink;
     private boolean notification;
     private String userId;
+    private List<String> listIDs;
 
     public Events() {}
 
     public Events(Date date, String Name, String category, String description, String meetingLink,
-                 boolean notification, String userId){
+                 boolean notification, String userId, List<String> listIDs){
         this.date = date;
         this.Name = Name;
         this.category = category;
@@ -34,6 +35,15 @@ public class Events {
         this.meetingLink = meetingLink;
         this.notification = notification;
         this.userId = userId;
+        this.listIDs = listIDs;
+    }
+
+    public List<String> getListIDs() {
+        return listIDs;
+    }
+
+    public void setListIDs(List<String> listIDs) {
+        this.listIDs = listIDs;
     }
 
     public void setDate(Date date) { this.date = date; }

@@ -1,5 +1,7 @@
 package com.example.cardinalPlanner.Events;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
@@ -32,8 +34,13 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.Collection;
 import java.util.Date;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
 
 import static com.example.cardinalPlanner.MainApplication.CHANNEL_1_ID;
 
@@ -150,6 +157,9 @@ public class CreateEvents extends AppCompatActivity {
         newEvent.setNotification(notifications);
         newEvent.setMeetingLink(meetingLinkInput.getText().toString());
         newEvent.setUserId(currentuser);
+        List<String> tag = new ArrayList<>();
+        tag.add(currentuser);
+        newEvent.setListIDs(tag);
         db.collection("Event").add(newEvent);
 
 
