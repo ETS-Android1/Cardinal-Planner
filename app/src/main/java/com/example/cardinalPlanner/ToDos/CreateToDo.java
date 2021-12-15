@@ -183,6 +183,7 @@ public class CreateToDo extends AppCompatActivity {
         ToDo newToDo = new ToDo();
         String timestamp = dateInput.getText().toString() + "_" + timeInput.getText().toString();
         Date date = getDateFromString(timestamp);
+        Log.d(TAG, "onAddItemsClicked: " + date.toString());
         String currentuser = FirebaseAuth.getInstance().getCurrentUser().getUid();
         newToDo.setDate(date);
         newToDo.setName(NameInput.getText().toString());

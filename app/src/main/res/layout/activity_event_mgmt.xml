@@ -16,10 +16,57 @@
         android:textAlignment="center"
         android:textSize="34sp"
         android:textStyle="bold"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/monthBoxEvent"
+            android:layout_width="85dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="MM"
+            android:inputType="date"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/dayBoxEvent"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="DD"
+            android:inputType="date"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/yearBoxEvent"
+            android:layout_width="86dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="YYYY"
+            android:inputType="date"
+            android:minHeight="48dp" />
+
+        <Button
+            android:id="@+id/searchBtnDayEvent"
+            android:layout_width="94dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Search Day" />
+
+        <Button
+            android:id="@+id/searchBtnWeekEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Search Week" />
+    </LinearLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/events_recycler"
         android:layout_width="409dp"
-        android:layout_height="729dp"
+        android:layout_height="621dp"
         android:background="#DDD9D9" />
 </LinearLayout>

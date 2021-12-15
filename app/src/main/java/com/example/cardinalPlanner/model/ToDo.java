@@ -51,4 +51,17 @@ public class ToDo {
     public boolean getNotification() { return notification; }
     public void setUserId(String userId) { this.userId = userId; }
     public String getUserId() { return userId; }
+    public Boolean equalsMonth(int compareTo){
+        boolean b = date.getMonth() == compareTo;
+        return b;
+    }
+    public Boolean equalsDay(int compareTo){
+        boolean b = date.getDay() == compareTo;
+        return b;
+    }
+    public Boolean equalsYear(int compareTo){
+        boolean b = date.getYear() == compareTo;
+        return b;
+    }
+
 }
