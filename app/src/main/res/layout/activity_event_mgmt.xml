@@ -63,10 +63,34 @@
             android:layout_weight="1"
             android:text="Search Week" />
     </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/categoryBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Category"
+            android:inputType="textPersonName"
+            android:minHeight="48dp" />
+
+        <Button
+            android:id="@+id/catButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search Category" />
+
+    </LinearLayout>
+
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/events_recycler"
         android:layout_width="409dp"
         android:layout_height="621dp"
         android:background="#DDD9D9" />
+
+
 </LinearLayout>

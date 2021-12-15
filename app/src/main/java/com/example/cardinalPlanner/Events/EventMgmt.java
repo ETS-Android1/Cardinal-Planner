@@ -44,8 +44,8 @@ public class EventMgmt extends AppCompatActivity {
     DocumentSnapshot snapshot;
     String dbKey;
     ArrayList<String> items = new ArrayList<String>();
-    Button searchBtnDay,searchBtnWeek;
-    EditText dayBox,monthBox,yearBox;
+    Button searchBtnDay,searchBtnWeek,catButton;
+    EditText dayBox,monthBox,yearBox,catBox;
     static final SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
     private onItemClickListener listener;
 
@@ -66,6 +66,46 @@ public class EventMgmt extends AppCompatActivity {
         FirestoreRecyclerOptions<Events> options = new FirestoreRecyclerOptions.Builder<Events>()
                 .setQuery(query, Events.class)
                 .build();
+        catBox = findViewById(R.id.categoryBox);
+        catButton = findViewById(R.id.catButton);
+        catButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                items.clear();
+                if(catBox.getText().toString().isEmpty()){
+                    return;
+                }
+
+                CollectionReference eventsCol2 = ref.collection("Event");
+                query = eventsCol2.whereEqualTo("userId", userID).whereEqualTo("category", catBox.getText().toString());
+                FirestoreRecyclerOptions<Events> optionsDate = new FirestoreRecyclerOptions.Builder<Events>()
+                        .setQuery(query,Events.class)
+                        .build();
+                adapter.stopListening();
+                adapter = new FirestoreRecyclerAdapter<Events, EventViewHolder>(optionsDate) {
+                    @Override
+                    protected void onBindViewHolder(@NonNull EventViewHolder holder, int position, @NonNull Events model) {
+                        holder.listName.setText(model.getName());
+                        holder.listDate.setText(model.getDate() + "");
+                        DocumentSnapshot snapshot = optionsDate.getSnapshots().getSnapshot(position);
+                        dbKey = snapshot.getId();
+                        items.add(snapshot.getId());
+                        Log.i(TAG, position + " : " + dbKey);
+
+                    }
+
+                    @NonNull
+                    @Override
+                    public EventViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.list_items_single, parent, false);
+                        return new EventViewHolder(view);
+                    }
+                };
+                eventList.setHasFixedSize(true);
+                eventList.setAdapter(adapter);
+                adapter.startListening();
+            }
+        });
         searchBtnDay = findViewById(R.id.searchBtnDayEvent);
         searchBtnDay.setOnClickListener(new View.OnClickListener() {
             @Override
