@@ -233,33 +233,25 @@ public class ToDoMod extends AppCompatActivity {
 
             nm.notify((int)notificationTime, notification);
         }
-        if(evryDy.isChecked()){
+        if(evryDy.isChecked() && !evryHr.isChecked()){
             Log.d(TAG, "sendOnChannelOne: Setting day alarm");
-            Intent alarmIntent = new Intent(this, AlarmReceiver.class);
-            AlarmManager alarmMgr =
-                    (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-            PendingIntent pendingIntent =
-                    PendingIntent.getBroadcast(this.getApplicationContext(), 1, alarmIntent,0);
-            alarmMgr.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
-                    SystemClock.elapsedRealtime() + AlarmManager.INTERVAL_DAY,
-                    AlarmManager.INTERVAL_DAY, pendingIntent);
-            if (pendingIntent != null && alarmMgr != null) {
-                alarmMgr.cancel(pendingIntent);
-            }
+            Intent intent = new Intent(this, AlarmReceiver.class);
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(
+                    this.getApplicationContext(), 234324244, intent, 0);
+            AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+            alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis()
+                    ,AlarmManager.INTERVAL_DAY, pendingIntent);
         }
         if(evryHr.isChecked()){
             Log.d(TAG, "sendOnChannelOne: setting hour alarm");
-            Intent alarmIntent = new Intent(this, AlarmReceiver.class);
-            AlarmManager alarmMgr =
-                    (AlarmManager) getSystemService(Context.ALARM_SERVICE);
-            PendingIntent pendingIntent =
-                    PendingIntent.getBroadcast(this.getApplicationContext(), 2, alarmIntent,0);
-            alarmMgr.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
-                    SystemClock.elapsedRealtime() + AlarmManager.INTERVAL_HOUR,
-                    AlarmManager.INTERVAL_HOUR, pendingIntent);
-            if (pendingIntent != null && alarmMgr != null) {
-                alarmMgr.cancel(pendingIntent);
-            }
+            Intent intent = new Intent(this, AlarmReceiver.class);
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(
+                    this.getApplicationContext(), 234324243, intent, 0);
+            AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+            alarmManager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(),pendingIntent);
+            alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis()
+                    ,AlarmManager.INTERVAL_HOUR, pendingIntent);
+
         }
 
     }
