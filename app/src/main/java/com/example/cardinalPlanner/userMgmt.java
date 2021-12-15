@@ -19,10 +19,17 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
 
+/**
+ * Class for editing and removeing the loged in user
+ */
 public class userMgmt extends AppCompatActivity {
-    public EditText name,email,curentPassword, password;
-    public Button submit,delete;
-    public String TAG = "user mgmt";
+    private EditText name,email,curentPassword, password;
+    private Button submit,delete;
+    private String TAG = "user mgmt";
+    /**
+     * Initializes all UI elemts and fills in data from database if needed
+     * @param savedInstanceState - called by android
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +57,10 @@ public class userMgmt extends AppCompatActivity {
         }
 
         submit.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Sends all changes to the datebase, only sends fields that have been modified
+             * @param view - current view
+             */
             @Override
             public void onClick(View view) {
 
@@ -119,7 +130,9 @@ public class userMgmt extends AppCompatActivity {
                 curentPassword.setText(null);
             }
         });
-
+        /**
+         * Deletes the current loffed in user and sends them back to the Main Activity which sends them to the login
+         */
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

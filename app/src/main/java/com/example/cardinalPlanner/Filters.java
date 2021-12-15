@@ -28,8 +28,15 @@ public class Filters {
     private String sortBy = null;
     private Query.Direction sortDirection = null;
 
+    /**
+     * Default constructor
+     */
     public Filters() {}
 
+    /**
+     * gets the default filters
+     * @return - filters
+     */
     public static Filters getDefault() {
         Filters filters = new Filters();
 

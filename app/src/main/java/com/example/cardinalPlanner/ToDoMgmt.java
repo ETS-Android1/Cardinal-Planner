@@ -33,23 +33,29 @@ import java.util.Comparator;
 import java.util.ConcurrentModificationException;
 import java.util.Date;
 
+/**
+ * Class for managing and searching through all the TD
+ */
 public class ToDoMgmt extends AppCompatActivity {
 
     private String userID;
     private Context context;
-    FirebaseFirestore ref;
-    Query query;
-    RecyclerView eventList;
-    EditText dayBox,monthBox,yearBox;
-    Button searchBtnDay,searchBtnWeek;
-    static final SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
+    private FirebaseFirestore ref;
+    private Query query;
+    private  RecyclerView eventList;
+    private EditText dayBox,monthBox,yearBox;
+    private Button searchBtnDay,searchBtnWeek;
+    private static final SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
     private FirestoreRecyclerAdapter<ToDo, ToDoMgmt.ToDoViewHolder> adapter;
-    DocumentSnapshot snapshot;
-    String dbKey;
-    ArrayList<String> items = new ArrayList<String>();
+    private DocumentSnapshot snapshot;
+    private String dbKey;
+    private  ArrayList<String> items = new ArrayList<String>();
     private ToDoMgmt.onItemClickListener listener;
     private String TAG = "ToDoMgmt";
-
+    /**
+     * Initializes all UI elemts and fills in data from database if needed
+     * @param savedInstanceState - called by android
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,6 +78,10 @@ public class ToDoMgmt extends AppCompatActivity {
 
         searchBtnDay = findViewById(R.id.searchBtnDay);
         searchBtnDay.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Searches TDs by user inputed date
+             * @param view - current view
+             */
             @Override
             public void onClick(View view) {
                 items.clear();
@@ -107,6 +117,12 @@ public class ToDoMgmt extends AppCompatActivity {
                         //dbKey = snapshot.getId();
                     }
 
+                    /**
+                     * Crewtes TD view holder
+                     * @param parent - parent the holder belongs to
+                     * @param viewType - default viewtype
+                     * @return
+                     */
                     @NonNull
                     @Override
                     public ToDoMgmt.ToDoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -124,6 +140,10 @@ public class ToDoMgmt extends AppCompatActivity {
 
         searchBtnWeek = findViewById(R.id.searchBtnWeek);
         searchBtnWeek.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Searches TDs by user inputed date, will show all events in the following 7 days
+             * @param view - current view
+             */
             @Override
             public void onClick(View view) {
                 items.clear();
@@ -158,7 +178,12 @@ public class ToDoMgmt extends AppCompatActivity {
                         items.add(snapshot.getId());
                         //dbKey = snapshot.getId();
                     }
-
+                    /**
+                     * Crewtes TD view holder
+                     * @param parent - parent the holder belongs to
+                     * @param viewType - default viewtype
+                     * @return
+                     */
                     @NonNull
                     @Override
                     public ToDoMgmt.ToDoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -180,7 +205,12 @@ public class ToDoMgmt extends AppCompatActivity {
                 items.add(snapshot.getId());
                 //dbKey = snapshot.getId();
             }
-
+            /**
+             * Crewtes TD view holder
+             * @param parent - parent the holder belongs to
+             * @param viewType - default viewtype
+             * @return
+             */
             @NonNull
             @Override
             public ToDoMgmt.ToDoViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -197,6 +227,10 @@ public class ToDoMgmt extends AppCompatActivity {
         private TextView listName;
         private TextView listDate;
 
+        /**
+         * Sets up TD view holder
+         * @param itemView
+         */
         public ToDoViewHolder(@NonNull View itemView ) {
             super(itemView);
             listName = itemView.findViewById(R.id.list_name);
@@ -214,20 +248,31 @@ public class ToDoMgmt extends AppCompatActivity {
         }
     }
 
+    /**
+     * initilaizes the onclick listener for TD objects
+     */
     public interface onItemClickListener {
         void onItemClick(DocumentSnapshot documentSnapshot, int position);
     }
-
+    /**
+     * sets the onclick listener for TD objects
+     */
     public void onItemClickListener(ToDoMgmt.onItemClickListener listener) {
         this.listener = listener;
     }
 
+    /**
+     * start adapter on activity start
+     */
     @Override
     protected void onStart() {
         super.onStart();
         adapter.startListening();
     }
 
+    /**
+     * stop adapter on activity stop
+     */
     @Override
     protected void onStop() {
         super.onStop();
@@ -242,7 +287,7 @@ public class ToDoMgmt extends AppCompatActivity {
      * @param datetoSaved
      * @return date - user entered date for the event
      */
-    private Date getDateFromString(String datetoSaved){
+    public Date getDateFromString(String datetoSaved){
         try {
             java.util.Date date = format.parse(datetoSaved);
             return date ;

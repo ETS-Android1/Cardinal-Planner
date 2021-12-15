@@ -30,21 +30,27 @@ import com.google.firebase.firestore.Query;
 
 import java.util.ArrayList;
 
+/**
+ * Class for the sharing of events between users
+ */
 public class ShareEvents extends AppCompatActivity {
     private static final String TAG = "ShareEvents";
 
     private String userID;
     private String docID;
     private DocumentReference document;
-    FirebaseFirestore ref;
-    Query query;
-    RecyclerView userView;
+    private FirebaseFirestore ref;
+    private Query query;
+    private RecyclerView userView;
     private FirestoreRecyclerAdapter<Users, ShareEvents.UserViewHolder> adapter;
-    DocumentSnapshot snapshot;
-    String dbKey;
-    ArrayList<String> userList = new ArrayList<String>();
+    private  DocumentSnapshot snapshot;
+    private String dbKey;
+    private ArrayList<String> userList = new ArrayList<String>();
     private EventMgmt.onItemClickListener listener;
-
+    /**
+     * Initializes all UI elemts and fills in data from database if needed
+     * @param savedInstanceState - called by android
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -79,6 +85,12 @@ public class ShareEvents extends AppCompatActivity {
 
             }
 
+            /**
+             * Creates view holder for share events
+             * @param parent - parent the holder is in
+             * @param viewType - type of holder
+             * @return
+             */
             @NonNull
             @Override
             public ShareEvents.UserViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -94,11 +106,19 @@ public class ShareEvents extends AppCompatActivity {
         private TextView listName;
         private TextView listDate;
 
+        /**
+         * creates the share viewholder
+         * @param itemView
+         */
         public UserViewHolder(@NonNull View itemView ) {
             super(itemView);
             listName = itemView.findViewById(R.id.list_name);
             listDate = itemView.findViewById(R.id.list_date);
             itemView.setOnClickListener(new View.OnClickListener() {
+                /**
+                 * sets the onlick for the items in the holder
+                 * @param view
+                 */
                 @Override
                 public void onClick(View view) {
                     int itemPosition = getLayoutPosition();
@@ -110,21 +130,33 @@ public class ShareEvents extends AppCompatActivity {
     }
 
 
-
+    /**
+     * creates onClick listenter
+     */
     public interface onItemClickListener {
         void onItemClick(DocumentSnapshot documentSnapshot, int position);
     }
 
+    /**
+     * sets on click listner
+     * @param listener
+     */
     public void onItemClickListener(EventMgmt.onItemClickListener listener) {
         this.listener = listener;
     }
 
+    /**
+     * Starts the adapter on activity start
+     */
     @Override
     protected void onStart() {
         super.onStart();
         adapter.startListening();
     }
 
+    /**
+     * stop adapter on activity stop
+     */
     @Override
     protected void onStop() {
         super.onStop();

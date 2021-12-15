@@ -35,6 +35,9 @@ import java.util.Date;
 
 import static com.example.cardinalPlanner.MainApplication.CHANNEL_1_ID;
 
+/**
+ * This class allows the user to visit links and modify any component of the Events
+ */
 public class EventMod extends AppCompatActivity {
     private TextView timestamp;
     private EditText NameInput, dateInput, timeInput,meetingLinkInput, categoryInput, descriptionInput;
@@ -52,7 +55,10 @@ public class EventMod extends AppCompatActivity {
     private Long notificationTime;
     private NotificationManagerCompat nm;
     private int NOTIFID = 0;
-
+    /**
+     * Initializes all UI elemts and fills in data from database if needed
+     * @param savedInstanceState - called by android
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,6 +83,9 @@ public class EventMod extends AppCompatActivity {
 
         document.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
             @Override
+            /**
+             * Query for the specific event info to display to the user
+             */
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 if (documentSnapshot.exists()) {
                     event = documentSnapshot.toObject(Events.class);
@@ -99,6 +108,10 @@ public class EventMod extends AppCompatActivity {
         });
         visitLink = findViewById(R.id.visitLinkBtn);
         visitLink.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Visits link in url field
+             * @param view - the current view
+             */
             @Override
             public void onClick(View view) {
                 Uri uri = Uri.parse("http://" + meetingLinkInput.getText().toString()); // missing 'http://' will cause crashed
@@ -108,6 +121,10 @@ public class EventMod extends AppCompatActivity {
         });
         shareEvent = findViewById(R.id.shareBtn);
         shareEvent.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Starts the sharing process
+             * @param view - current view
+             */
             @Override
             public void onClick(View view) {
                 Intent shareI = new Intent(EventMod.this, ShareEvents.class);
@@ -117,6 +134,10 @@ public class EventMod extends AppCompatActivity {
         });
 
         notificationsBtn.setOnClickListener(new View.OnClickListener() {
+            /**
+             * When the user clicks notifications sets flag to true
+             * @param view - current view
+             */
             @Override
             public void onClick(View view) {
                 notifications = true;
@@ -124,8 +145,13 @@ public class EventMod extends AppCompatActivity {
         });
         finish = findViewById(R.id.updateEventBtn);
         finish.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Sets up information to store to the database, runs the notification function if the flag is true
+             * @param view - current view
+             */
             @Override
-            public void onClick(View view) {if(notifications){
+            public void onClick(View view) {
+                if(notifications){
                 String dayInfo[] = dateInput.getText().toString().split("-");
                 String timeInfo[] = timeInput.getText().toString().split(":");
                 Log.d(TAG, "onAddItemsClicked: "  + dayInfo[0]+"," + dayInfo[1] + "," + dayInfo[2]+ " | " + timeInfo[0] + "," +timeInfo[1] + "," +timeInfo[2] + ",");
@@ -157,6 +183,10 @@ public class EventMod extends AppCompatActivity {
         });
         delete = findViewById(R.id.deleteEventBtn);
         delete.setOnClickListener(new View.OnClickListener() {
+            /**
+             * if user desires deletes current event
+             * @param view
+             */
             @Override
             public void onClick(View view) {
                 document.delete();
@@ -172,7 +202,7 @@ public class EventMod extends AppCompatActivity {
      * @param datetoSaved
      * @return date - user entered date for the event
      */
-    private Date getDateFromString(String datetoSaved){
+    public Date getDateFromString(String datetoSaved){
         try {
             java.util.Date date = format.parse(datetoSaved);
             return date ;
@@ -180,7 +210,11 @@ public class EventMod extends AppCompatActivity {
             return null ;
         }
     }
-    private void sendOnChannelOne(){
+
+    /**
+     * Sets up the notifications for this event
+     */
+    public void sendOnChannelOne(){
         Log.d(TAG, "sendOnChannelOne: Setting up notification");
         Intent newI = new Intent(getApplicationContext(), EventMgmt.class);
         PendingIntent pend = PendingIntent.getActivity(getApplicationContext(),0,newI,0);

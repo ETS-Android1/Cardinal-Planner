@@ -44,19 +44,26 @@ import java.util.ListIterator;
 
 import static com.example.cardinalPlanner.MainApplication.CHANNEL_1_ID;
 
+/**
+ * This activity will allow the user to make "Events" and add them to the database, while setting notifications
+ */
 public class CreateEvents extends AppCompatActivity {
     private FirebaseFirestore mFirestore;
-    EditText NameInput, dateInput, timeInput,meetingLinkInput, categoryInput, descriptionInput;
-    RadioButton notificationsBtn;
-    boolean notifications = false;
-    Button finish;
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
-    static final SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
-    String TAG = "CreateEvents";
+    private EditText NameInput, dateInput, timeInput,meetingLinkInput, categoryInput, descriptionInput;
+    private RadioButton notificationsBtn;
+    private boolean notifications = false;
+    private Button finish;
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private static final SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
+    private String TAG = "CreateEvents";
     private NotificationManagerCompat nm;
     private long notificationTime;
     private int NOTIFID = 0;
 
+    /**
+     * Initializes all UI elemts and fills in data from database if needed
+     * @param savedInstanceState - called by android
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -102,6 +109,10 @@ public class CreateEvents extends AppCompatActivity {
 
         notificationsBtn = findViewById(R.id.eventNotifications);
         notificationsBtn.setOnClickListener(new View.OnClickListener() {
+            /**
+             * When the user clicks notifications sets flag to true
+             * @param view - current view
+             */
             @Override
             public void onClick(View view) {
                 notifications = true;
@@ -110,7 +121,12 @@ public class CreateEvents extends AppCompatActivity {
         });
 
     }
-    private void sendOnChannelOne(){
+
+    /**
+     * Creates the notification field for events,
+     * the notification will be removed on the event date
+     */
+    public void sendOnChannelOne(){
         Log.d(TAG, "sendOnChannelOne: Setting up notification");
         Intent newI = new Intent(getApplicationContext(), EventMgmt.class);
         PendingIntent pend = PendingIntent.getActivity(getApplicationContext(),0,newI,0);
@@ -133,7 +149,7 @@ public class CreateEvents extends AppCompatActivity {
      * @param datetoSaved
      * @return date - user entered date for the event
      */
-    private Date getDateFromString(String datetoSaved){
+    public Date getDateFromString(String datetoSaved){
         try {
             java.util.Date date = format.parse(datetoSaved);
             return date ;
@@ -145,7 +161,7 @@ public class CreateEvents extends AppCompatActivity {
     /**
      * Take information input from the user and creates event and posts it to the firebase database
      */
-    private void onAddItemsClicked() {
+    public void onAddItemsClicked() {
         Events newEvent = new Events();
         String timestamp = dateInput.getText().toString() + "_" + timeInput.getText().toString();
         Date date = getDateFromString(timestamp);

@@ -16,6 +16,9 @@ import androidx.core.app.NotificationCompat;
 import com.example.cardinalPlanner.MainActivity;
 import com.example.cardinalPlanner.R;
 
+/**
+ * class for displaying notifications to the user
+ */
 public class DisplayNotification extends BroadcastReceiver {
     private String title = "";
     private String desc = "";
@@ -32,6 +35,12 @@ public class DisplayNotification extends BroadcastReceiver {
         this.desc = desc;
         this.type = type;
     }
+
+    /**
+     * when the application receives a notifiaction event it will display through the showNotif function
+     * @param context
+     * @param intent
+     */
     @Override
     public void onReceive(Context context, Intent intent) {
         Log.d(TAG, "onReceive: received");
@@ -42,7 +51,7 @@ public class DisplayNotification extends BroadcastReceiver {
      * Sets up the notificaiton channel and manager
      * @param context - the context asking for a notification
      */
-    private void showNotif(Context context){
+    public void showNotif(Context context){
         Intent intent = new Intent(context, MainActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
         PendingIntent pend = PendingIntent.getActivities(context,0, new Intent[]{intent},PendingIntent.FLAG_UPDATE_CURRENT);

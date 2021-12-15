@@ -28,6 +28,9 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Main landing page for UI, user has access to all the create features and can give voice commands
+ */
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
@@ -41,7 +44,10 @@ public class MainActivity extends AppCompatActivity {
     private Button userInfo,logout, events, todo, eventMgmt, toDoMgmt, voiceCommand, shareMenu, viewPlan;
     public ListView voiceList;
 
-
+    /**
+     * Initializes all UI elemts and fills in data from database if needed
+     * @param savedInstanceState - called by android
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +59,10 @@ public class MainActivity extends AppCompatActivity {
         mFirestore = FirebaseUtil.getFirestore();
         logout = findViewById(R.id.logOutBtn);
         logout.setOnClickListener(new View.OnClickListener() {
+            /**
+             * logs user out of application, and restarts sign in
+             * @param view - current view
+             */
             @Override
             public void onClick(View view) {
                 FirebaseAuth.getInstance().signOut();
@@ -61,14 +71,23 @@ public class MainActivity extends AppCompatActivity {
         });
         userInfo = findViewById(R.id.userInfo);
         userInfo.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Takes user to user info page
+             * @param view - current view
+             */
             @Override
             public void onClick(View view) {
+
                 Intent userInfoPage = new Intent(MainActivity.this,userMgmt.class);
                 startActivity(userInfoPage);
             }
         });
         events = findViewById(R.id.events);
         events.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Takes user to create event page
+             * @param view - current view
+             */
             @Override
             public void onClick(View view) {
                 Intent createEvent = new Intent(MainActivity.this, CreateEvents.class);
@@ -77,6 +96,10 @@ public class MainActivity extends AppCompatActivity {
         });
         todo = findViewById(R.id.todoBtn);
         todo.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Takes user to create TD page
+             * @param view - current view
+             */
             @Override
             public void onClick(View view) {
                 Intent createToDo = new Intent(MainActivity.this, CreateToDo.class);
@@ -85,6 +108,10 @@ public class MainActivity extends AppCompatActivity {
         });
         eventMgmt = findViewById(R.id.eventMgmtBtn);
         eventMgmt.setOnClickListener(new View.OnClickListener() {
+            /**
+             *Takes user to event management page
+             * @param view - current view
+             */
             @Override
             public void onClick(View view) {
                 Intent eventMgmt = new Intent(MainActivity.this, EventMgmt.class);
@@ -93,6 +120,10 @@ public class MainActivity extends AppCompatActivity {
         });
         toDoMgmt = findViewById(R.id.toDoMgmtBtn);
         toDoMgmt.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Takes user to TD management page
+             * @param view - current view
+             */
             @Override
             public void onClick(View view) {
                 Intent toDOMgmt = new Intent(MainActivity.this, ToDoMgmt.class);
@@ -101,6 +132,10 @@ public class MainActivity extends AppCompatActivity {
         });
         shareMenu = (Button) findViewById(R.id.shareBtn);
         shareMenu.setOnClickListener(new View.OnClickListener() {
+            /**
+             * starts the sharing process
+             * @param view - current view
+             */
             @Override
             public void onClick(View view) {
                 startShare();
@@ -131,6 +166,9 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Starts an intent to sharing with another application
+     */
     public void startShare(){
         Intent sendIntent = new Intent();
         sendIntent.setAction(Intent.ACTION_SEND);
@@ -141,12 +179,22 @@ public class MainActivity extends AppCompatActivity {
         startActivity(shareIntent);
     }
 
+    /**
+     * Starts voice command listerner/recorder
+     */
     public void startVoiceCommandActivity(){
         Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Speech Command Test");
         startActivityForResult(intent, VOICE_RECOGNITION_REQUEST_CODE);
     }
+
+    /**
+     * called when voice command is completeds
+     * @param requestCode - code for the listener request
+     * @param resultCode - result code
+     * @param data - the voce data
+     */
     @SuppressLint("MissingSuperCall")
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -170,7 +218,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
+    /**
+     * on startup starts sign in
+     */
     @Override
     public void onStart() {
         super.onStart();
@@ -184,12 +234,20 @@ public class MainActivity extends AppCompatActivity {
     private boolean shouldStartSignIn() {
         return (!mViewModel.getIsSigningIn() && FirebaseUtil.getAuth().getCurrentUser() == null);
     }
+
+    /**
+     * default onstop
+     */
     @Override
     public void onStop() {
         super.onStop();
 
     }
-    private void startSignIn() {
+
+    /**
+     * Starts the sign in process with the firebase API
+     */
+    public void startSignIn() {
         // Sign in with FirebaseUI
         Intent intent = FirebaseUtil.getAuthUI()
                 .createSignInIntentBuilder()

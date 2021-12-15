@@ -32,6 +32,9 @@ public class FirebaseUtil {
     private static FirebaseAuth AUTH;
     private static AuthUI AUTH_UI;
 
+    /**
+     * @return gets the Cardinal planner firestore inforamation
+     */
     public static FirebaseFirestore getFirestore() {
         if (FIRESTORE == null) {
             FIRESTORE = FirebaseFirestore.getInstance();
@@ -46,6 +49,10 @@ public class FirebaseUtil {
         return FIRESTORE;
     }
 
+    /**
+     * Authorizes users or allows user to create an account
+     * @return the authentication
+     */
     public static FirebaseAuth getAuth() {
         if (AUTH == null) {
             AUTH = FirebaseAuth.getInstance();
@@ -60,6 +67,9 @@ public class FirebaseUtil {
         return AUTH;
     }
 
+    /**
+     * @return the default authenitcaion User interface for the login process
+     */
     public static AuthUI getAuthUI() {
         if (AUTH_UI == null) {
             AUTH_UI = AuthUI.getInstance();

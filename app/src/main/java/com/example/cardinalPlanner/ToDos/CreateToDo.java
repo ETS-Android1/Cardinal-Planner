@@ -33,21 +33,27 @@ import java.util.Date;
 
 import static com.example.cardinalPlanner.MainApplication.CHANNEL_1_ID;
 
+/**
+ * Class for the display where users can create TD objects and save them to the database
+ */
 public class CreateToDo extends AppCompatActivity {
     private FirebaseFirestore mFirestore;
-    EditText NameInput, timeInput, dateInput, descriptionInput;
-    RadioButton notificationsBtn, persistUntilCompletion;
-    CheckBox evryHr,evryDy;
-    boolean notifications = false;
-    boolean PUC = false;
-    Button finish;
-    FirebaseFirestore db = FirebaseFirestore.getInstance();
-    static final SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
+    private EditText NameInput, timeInput, dateInput, descriptionInput;
+    private RadioButton notificationsBtn, persistUntilCompletion;
+    private CheckBox evryHr,evryDy;
+    private boolean notifications = false;
+    private boolean PUC = false;
+    private Button finish;
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+    private static final SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
     private String TAG= "CreateToDo";
     private long notificationTime;
     private NotificationManagerCompat nm;
     private int NOTIFID = 0;
-
+    /**
+     * Initializes all UI elemts and fills in data from database if needed
+     * @param savedInstanceState - called by android
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +68,10 @@ public class CreateToDo extends AppCompatActivity {
         evryDy = findViewById(R.id.checkBoxDay);
         nm = NotificationManagerCompat.from(this);
         notificationsBtn.setOnClickListener(new View.OnClickListener() {
+            /**
+             * sets notification flag to true
+             * @param view - cuirrent view
+             */
             @Override
             public void onClick(View view) {
                 notifications = true;
@@ -69,6 +79,10 @@ public class CreateToDo extends AppCompatActivity {
         });
         persistUntilCompletion = findViewById(R.id.persistComplete);
         persistUntilCompletion.setOnClickListener(new View.OnClickListener() {
+            /**
+             * sets persistant flag to true
+             * @param view - current view
+             */
             @Override
             public void onClick(View view) {
                 PUC = true;
@@ -77,6 +91,10 @@ public class CreateToDo extends AppCompatActivity {
 
         finish = findViewById(R.id.finishBtn);
         finish.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Saves infor and sets up notifications if needed, for persistant the notification flag needs to be True as well
+             * @param view - current view
+             */
             @Override
             public void onClick(View view) {
                 if(notifications){
@@ -104,7 +122,11 @@ public class CreateToDo extends AppCompatActivity {
         });
 
     }
-    private void sendOnChannelOne(){
+
+    /**
+     * sets up notifications, and reminders for if they are persistant recurring or both
+     */
+    public void sendOnChannelOne(){
         Log.d(TAG, "sendOnChannelOne: Setting up notification");
 
             Intent newI = new Intent(getApplicationContext(), ToDoMgmt.class);
@@ -167,7 +189,7 @@ public class CreateToDo extends AppCompatActivity {
      * @param datetoSaved
      * @return date - user entered date for the event
      */
-    private Date getDateFromString(String datetoSaved){
+    public Date getDateFromString(String datetoSaved){
         try {
             java.util.Date date = format.parse(datetoSaved);
             return date ;
@@ -179,7 +201,7 @@ public class CreateToDo extends AppCompatActivity {
     /**
      * Take information input from the user and creates ToDos and posts it to the firebase database
      */
-    private void onAddItemsClicked() {
+    public void onAddItemsClicked() {
         ToDo newToDo = new ToDo();
         String timestamp = dateInput.getText().toString() + "_" + timeInput.getText().toString();
         Date date = getDateFromString(timestamp);

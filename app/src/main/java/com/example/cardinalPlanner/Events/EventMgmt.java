@@ -33,22 +33,29 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
+/**
+ * This class allows to view all of the events they have created, and the can fiolter by category or date/week
+ */
 public class EventMgmt extends AppCompatActivity {
     private static final String TAG = "EventMgmt";
 
     private String userID;
-    FirebaseFirestore ref;
-    Query query;
-    RecyclerView eventList;
+    private FirebaseFirestore ref;
+    private Query query;
+    private RecyclerView eventList;
     private FirestoreRecyclerAdapter<Events, EventViewHolder> adapter;
-    DocumentSnapshot snapshot;
-    String dbKey;
-    ArrayList<String> items = new ArrayList<String>();
-    Button searchBtnDay,searchBtnWeek,catButton;
-    EditText dayBox,monthBox,yearBox,catBox;
-    static final SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
+    private DocumentSnapshot snapshot;
+    private String dbKey;
+    private ArrayList<String> items = new ArrayList<String>();
+    private Button searchBtnDay,searchBtnWeek,catButton;
+    private EditText dayBox,monthBox,yearBox,catBox;
+    private static final SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
     private onItemClickListener listener;
 
+    /**
+     * On create sets up buttons and all that fun stuff
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,22 +66,22 @@ public class EventMgmt extends AppCompatActivity {
         eventList.setLayoutManager(new LinearLayoutManager(this));
         ref = FirebaseFirestore.getInstance();
         CollectionReference eventsCol = ref.collection("Event");
-//<<<<<<< HEAD
-        //query = eventsCol.whereEqualTo("userId", userID);
         dayBox = findViewById(R.id.dayBoxEvent);
         monthBox = findViewById(R.id.monthBoxEvent);
         yearBox = findViewById(R.id.yearBoxEvent);
-//=======
-        //query = eventsCol.whereEqualTo("userId", userID);
         query = eventsCol.whereArrayContains("listIDs", userID);
 
-//>>>>>>> cm123
+
         FirestoreRecyclerOptions<Events> options = new FirestoreRecyclerOptions.Builder<Events>()
                 .setQuery(query, Events.class)
                 .build();
         catBox = findViewById(R.id.categoryBox);
         catButton = findViewById(R.id.catButton);
         catButton.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Allows for user to search for events by category
+             * @param view
+             */
             @Override
             public void onClick(View view) {
                 items.clear();
@@ -114,6 +121,10 @@ public class EventMgmt extends AppCompatActivity {
         });
         searchBtnDay = findViewById(R.id.searchBtnDayEvent);
         searchBtnDay.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Allows user to search for events on a specific day
+             * @param view
+             */
             @Override
             public void onClick(View view) {
                 items.clear();
@@ -134,7 +145,7 @@ public class EventMgmt extends AppCompatActivity {
                 Log.d(TAG, "onClick: " + month + "/" + day + "/" + year);
                 Log.d(TAG, "onClick:  Start" + startday.toString() + "|" + endday.toString());
                 CollectionReference eventsCol2 = ref.collection("Event");
-                query = eventsCol2.whereEqualTo("userId", userID).whereGreaterThanOrEqualTo("date", startday).whereLessThanOrEqualTo("date", endday);
+                query = eventsCol2.whereArrayContains("listIDs", userID).whereGreaterThanOrEqualTo("date", startday).whereLessThanOrEqualTo("date", endday);
                 FirestoreRecyclerOptions<Events> optionsDate = new FirestoreRecyclerOptions.Builder<Events>()
                         .setQuery(query,Events.class)
                         .build();
@@ -151,6 +162,12 @@ public class EventMgmt extends AppCompatActivity {
 
                     }
 
+                    /**
+                     * builds the recyclerview
+                     * @param parent
+                     * @param viewType
+                     * @return - view holder
+                     */
                     @NonNull
                     @Override
                     public EventViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -168,6 +185,10 @@ public class EventMgmt extends AppCompatActivity {
 
         searchBtnWeek = findViewById(R.id.searchBtnWeekEvent);
         searchBtnWeek.setOnClickListener(new View.OnClickListener() {
+            /**
+             * Allows user to search  by week given an inputed date
+             * @param view
+             */
             @Override
             public void onClick(View view) {
                 items.clear();
@@ -188,7 +209,7 @@ public class EventMgmt extends AppCompatActivity {
                 Log.d(TAG, "onClick: " + month + "/" + day + "/" + year);
                 Log.d(TAG, "onClick:  Start" + startday.toString() + "|" + endday.toString());
                 CollectionReference eventsCol2 = ref.collection("Event");
-                query = eventsCol2.whereEqualTo("userId", userID).whereGreaterThanOrEqualTo("date", startday).whereLessThanOrEqualTo("date", endday);
+                query = eventsCol2.whereArrayContains("listIDs", userID).whereGreaterThanOrEqualTo("date", startday).whereLessThanOrEqualTo("date", endday);
                 FirestoreRecyclerOptions<Events> optionsDate = new FirestoreRecyclerOptions.Builder<Events>()
                         .setQuery(query,Events.class)
                         .build();
@@ -204,7 +225,12 @@ public class EventMgmt extends AppCompatActivity {
                         Log.i(TAG, position + " : " + dbKey);
 
                     }
-
+                    /**
+                     * builds the recyclerview
+                     * @param parent
+                     * @param viewType
+                     * @return - view holder
+                     */
                     @NonNull
                     @Override
                     public EventViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -228,7 +254,12 @@ public class EventMgmt extends AppCompatActivity {
                 Log.i(TAG, position + " : " + dbKey);
 
             }
-
+            /**
+             * builds the recyclerview
+             * @param parent
+             * @param viewType
+             * @return - view holder
+             */
             @NonNull
             @Override
             public EventViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -245,6 +276,10 @@ public class EventMgmt extends AppCompatActivity {
         private TextView listName;
         private TextView listDate;
 
+        /**
+         * sets up the event viewholder used by the adapter to create the recyclerview
+         * @param itemView - view of the item lsit which will go into the view
+         */
         public EventViewHolder(@NonNull View itemView ) {
             super(itemView);
             listName = itemView.findViewById(R.id.list_name);
@@ -264,21 +299,33 @@ public class EventMgmt extends AppCompatActivity {
     }
 
 
-
+    /**
+     * sets up onclick for the events
+     */
     public interface onItemClickListener {
         void onItemClick(DocumentSnapshot documentSnapshot, int position);
     }
 
+    /**
+     * onclick listener for the items
+     * @param listener - the listener for the event items
+     */
     public void onItemClickListener(onItemClickListener listener) {
         this.listener = listener;
     }
 
+    /**
+     * When this activity starts the adapter stats listening
+     */
     @Override
     protected void onStart() {
         super.onStart();
         adapter.startListening();
     }
 
+    /**
+     * When this activity stops the adapter stops listening
+     */
     @Override
     protected void onStop() {
         super.onStop();

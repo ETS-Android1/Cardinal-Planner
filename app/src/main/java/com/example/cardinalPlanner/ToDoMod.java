@@ -36,6 +36,9 @@ import java.util.Date;
 
 import static com.example.cardinalPlanner.MainApplication.CHANNEL_1_ID;
 
+/**
+ * This class allows the user to edit a specific TD object and send info to the database, they can also mark an item as complete to stop persistant notification
+ */
 public class ToDoMod extends AppCompatActivity {
     private static int NOTIFID = 0;
     private TextView timestamp;
@@ -56,7 +59,10 @@ public class ToDoMod extends AppCompatActivity {
     private long notificationTime;
     private NotificationManagerCompat nm;
     private CheckBox evryHr,evryDy;
-
+    /**
+     * Initializes all UI elemts and fills in data from database if needed
+     * @param savedInstanceState - called by android
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -83,6 +89,10 @@ public class ToDoMod extends AppCompatActivity {
         document = ref.collection("toDo").document(path);
 
         document.get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            /**
+             * If the query to get all TD info is a success display the info on screen
+             * @param documentSnapshot
+             */
             @Override
             public void onSuccess(DocumentSnapshot documentSnapshot) {
                 if (documentSnapshot.exists()) {
@@ -102,6 +112,10 @@ public class ToDoMod extends AppCompatActivity {
         });
 
         notificationsBtn.setOnClickListener(new View.OnClickListener() {
+            /**
+             * sets notificaion flag to true
+             * @param view - current view
+             */
             @Override
             public void onClick(View view) {
                 notifications = true;
@@ -109,12 +123,20 @@ public class ToDoMod extends AppCompatActivity {
         });
 
         complete.setOnClickListener(new View.OnClickListener() {
+            /**
+             * sets complete flag to true
+             * @param view - current view
+             */
             @Override
             public void onClick(View view) {
                 completeToDo = true;
             }
         });
         pucBtn.setOnClickListener(new View.OnClickListener() {
+            /**
+             * sets persistant flag to true
+             * @param view - current view
+             */
             @Override
             public void onClick(View view) {
                 PUC = true;
@@ -123,6 +145,10 @@ public class ToDoMod extends AppCompatActivity {
 
         finish = findViewById(R.id.updateEventBtn);
         finish.setOnClickListener(new View.OnClickListener() {
+            /**
+             * sets up all types of notificartions and updates database information
+             * @param view - current view
+             */
             @Override
             public void onClick(View view) {
                 if(notifications){
@@ -169,6 +195,10 @@ public class ToDoMod extends AppCompatActivity {
         });
         delete = findViewById(R.id.deleteEventBtn);
         delete.setOnClickListener(new View.OnClickListener() {
+            /**
+             * delets a TD this will also stop any persisting notificatrions
+             * @param view
+             */
             @Override
             public void onClick(View view) {
                 document.delete();
@@ -189,7 +219,7 @@ public class ToDoMod extends AppCompatActivity {
      * @param datetoSaved
      * @return date - user entered date for the event
      */
-    private Date getDateFromString(String datetoSaved){
+    public Date getDateFromString(String datetoSaved){
         try {
             java.util.Date date = format.parse(datetoSaved);
             return date ;
@@ -197,7 +227,10 @@ public class ToDoMod extends AppCompatActivity {
             return null ;
         }
     }
-    private void sendOnChannelOne(){
+    /**
+     * sets up notifications, and reminders for if they are persistant recurring or both
+     */
+    public void sendOnChannelOne(){
         Log.d(TAG, "sendOnChannelOne: Setting up notification");
         Intent newI = new Intent(getApplicationContext(), ToDoMgmt.class);
         PendingIntent pend = PendingIntent.getActivity(getApplicationContext(), 0, newI, 0);
