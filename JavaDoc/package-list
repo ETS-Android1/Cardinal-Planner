@@ -1,0 +1,7 @@
+com.example.cardinalPlanner
+com.example.cardinalPlanner.Events
+com.example.cardinalPlanner.ToDos
+com.example.cardinalPlanner.adapter
+com.example.cardinalPlanner.model
+com.example.cardinalPlanner.util
+com.example.cardinalPlanner.viewmodel
