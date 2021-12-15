@@ -90,7 +90,7 @@ public class EventMgmt extends AppCompatActivity {
                 }
 
                 CollectionReference eventsCol2 = ref.collection("Event");
-                query = eventsCol2.whereEqualTo("userId", userID).whereEqualTo("category", catBox.getText().toString());
+                query = eventsCol2.whereArrayContains("listIDs", userID).whereEqualTo("category", catBox.getText().toString());
                 FirestoreRecyclerOptions<Events> optionsDate = new FirestoreRecyclerOptions.Builder<Events>()
                         .setQuery(query,Events.class)
                         .build();

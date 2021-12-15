@@ -10,6 +10,9 @@ import android.os.Build;
  * creates a notication channel for this application
  */
 public class MainApplication extends Application {
+    /**
+     * Constant for the notification channel identifier
+     */
     public static final String CHANNEL_1_ID = "channel1";
 
     /**

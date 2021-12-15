@@ -77,7 +77,7 @@ public class ToDoMod extends AppCompatActivity {
         pucBtn = findViewById(R.id.persistComplete);
         complete = findViewById(R.id.completeToDo);
         evryHr = findViewById(R.id.checkBoxHour);
-        evryDy = findViewById(R.id.checkBoxHour);
+        evryDy = findViewById(R.id.checkBoxDay);
         nm = NotificationManagerCompat.from(this);
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
@@ -281,7 +281,7 @@ public class ToDoMod extends AppCompatActivity {
             PendingIntent pendingIntent = PendingIntent.getBroadcast(
                     this.getApplicationContext(), 234324243, intent, 0);
             AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
-            alarmManager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(),pendingIntent);
+            alarmManager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis() + 100,pendingIntent);
             alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis()
                     ,AlarmManager.INTERVAL_HOUR, pendingIntent);
 
