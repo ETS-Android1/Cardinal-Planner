@@ -59,7 +59,7 @@ public class CreateToDo extends AppCompatActivity {
         descriptionInput = findViewById(R.id.DescriptionInput);
         notificationsBtn = findViewById(R.id.NotificationsBtn);
         evryHr = findViewById(R.id.checkBoxHour);
-        evryDy = findViewById(R.id.checkBoxHour);
+        evryDy = findViewById(R.id.checkBoxDay);
         nm = NotificationManagerCompat.from(this);
         notificationsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -140,35 +140,25 @@ public class CreateToDo extends AppCompatActivity {
 
             nm.notify((int)notificationTime, notification);
         }
-        if(PUC && evryDy.isChecked()){
+        if(evryDy.isChecked() && !evryHr.isChecked()){
             Log.d(TAG, "sendOnChannelOne: Setting day alarm");
-            Context context = getApplicationContext();
-            Intent alarmIntent = new Intent(context, AlarmReceiver.class);
-            AlarmManager alarmMgr =
-                    (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-            PendingIntent pendingIntent =
-                    PendingIntent.getService(context, 1, alarmIntent,PendingIntent.FLAG_NO_CREATE);
-            alarmMgr.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
-                    SystemClock.elapsedRealtime() + AlarmManager.INTERVAL_DAY,
-                    AlarmManager.INTERVAL_DAY, pendingIntent);
-            if (pendingIntent != null && alarmMgr != null) {
-                alarmMgr.cancel(pendingIntent);
-            }
+            Intent intent = new Intent(this, AlarmReceiver.class);
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(
+                    this.getApplicationContext(), 234324244, intent, 0);
+            AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+            alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis()
+                    ,AlarmManager.INTERVAL_DAY, pendingIntent);
         }
-        if(PUC && evryHr.isChecked()){
+        if(evryHr.isChecked()){
             Log.d(TAG, "sendOnChannelOne: setting hour alarm");
-            Context context = getApplicationContext();
-            Intent alarmIntent = new Intent(context, AlarmReceiver.class);
-            AlarmManager alarmMgr =
-                    (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
-            PendingIntent pendingIntent =
-                    PendingIntent.getService(context, 2, alarmIntent,PendingIntent.FLAG_NO_CREATE);
-            alarmMgr.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
-                    SystemClock.elapsedRealtime() + AlarmManager.INTERVAL_HOUR,
-                    AlarmManager.INTERVAL_HOUR, pendingIntent);
-            if (pendingIntent != null && alarmMgr != null) {
-                alarmMgr.cancel(pendingIntent);
-            }
+            Intent intent = new Intent(this, AlarmReceiver.class);
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(
+                    this.getApplicationContext(), 234324243, intent, 0);
+            AlarmManager alarmManager = (AlarmManager) getSystemService(ALARM_SERVICE);
+            alarmManager.set(AlarmManager.RTC_WAKEUP, System.currentTimeMillis(),pendingIntent);
+            alarmManager.setRepeating(AlarmManager.RTC_WAKEUP, System.currentTimeMillis()
+                    ,AlarmManager.INTERVAL_HOUR, pendingIntent);
+
         }
 
     }

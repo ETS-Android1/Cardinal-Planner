@@ -233,14 +233,13 @@ public class ToDoMod extends AppCompatActivity {
 
             nm.notify((int)notificationTime, notification);
         }
-        if(PUC && evryDy.isChecked()){
+        if(evryDy.isChecked()){
             Log.d(TAG, "sendOnChannelOne: Setting day alarm");
-            Context context = getApplicationContext();
-            Intent alarmIntent = new Intent(context, AlarmReceiver.class);
+            Intent alarmIntent = new Intent(this, AlarmReceiver.class);
             AlarmManager alarmMgr =
-                    (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+                    (AlarmManager) getSystemService(Context.ALARM_SERVICE);
             PendingIntent pendingIntent =
-                    PendingIntent.getService(context, 1, alarmIntent,PendingIntent.FLAG_NO_CREATE);
+                    PendingIntent.getBroadcast(this.getApplicationContext(), 1, alarmIntent,0);
             alarmMgr.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
                     SystemClock.elapsedRealtime() + AlarmManager.INTERVAL_DAY,
                     AlarmManager.INTERVAL_DAY, pendingIntent);
@@ -248,14 +247,13 @@ public class ToDoMod extends AppCompatActivity {
                 alarmMgr.cancel(pendingIntent);
             }
         }
-        if(PUC && evryHr.isChecked()){
+        if(evryHr.isChecked()){
             Log.d(TAG, "sendOnChannelOne: setting hour alarm");
-            Context context = getApplicationContext();
-            Intent alarmIntent = new Intent(context, AlarmReceiver.class);
+            Intent alarmIntent = new Intent(this, AlarmReceiver.class);
             AlarmManager alarmMgr =
-                    (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+                    (AlarmManager) getSystemService(Context.ALARM_SERVICE);
             PendingIntent pendingIntent =
-                    PendingIntent.getService(context, 2, alarmIntent,PendingIntent.FLAG_NO_CREATE);
+                    PendingIntent.getBroadcast(this.getApplicationContext(), 2, alarmIntent,0);
             alarmMgr.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
                     SystemClock.elapsedRealtime() + AlarmManager.INTERVAL_HOUR,
                     AlarmManager.INTERVAL_HOUR, pendingIntent);
