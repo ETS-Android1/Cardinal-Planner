@@ -11,9 +11,9 @@
     <TextView
         android:id="@+id/header_title"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="45dp"
         android:background="#CF4040"
-        android:text="Edit or delete selected event"
+        android:text="Manage selected event"
         android:textAlignment="center"
         android:textSize="30sp"
         android:textStyle="bold" />
@@ -21,7 +21,7 @@
     <EditText
         android:id="@+id/NameInput"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:gravity="center"
         android:hint="Name"
@@ -30,7 +30,7 @@
     <EditText
         android:id="@+id/eventCategoryInput"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:ems="10"
         android:gravity="center"
         android:hint="Category"
@@ -39,7 +39,7 @@
     <EditText
         android:id="@+id/meetingLinkInput"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:hint="Meeting Link"
         android:inputType="text"
@@ -48,13 +48,13 @@
     <Button
         android:id="@+id/visitLinkBtn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:text="Visit Link" />
 
     <EditText
         android:id="@+id/DescriptionInput"
         android:layout_width="match_parent"
-        android:layout_height="67dp"
+        android:layout_height="60dp"
         android:ems="10"
         android:hint="Description"
         android:inputType="textLongMessage"
@@ -70,7 +70,7 @@
     <TextView
         android:id="@+id/TitleTime"
         android:layout_width="match_parent"
-        android:layout_height="51dp"
+        android:layout_height="50dp"
         android:text="EVENT TIME"
         android:textAlignment="center"
         android:textSize="20sp" />
@@ -78,7 +78,7 @@
     <EditText
         android:id="@+id/eventDateInput"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:hint="yyyy-MM-dd"
         android:inputType="text"
@@ -87,7 +87,7 @@
     <EditText
         android:id="@+id/eventTimeInput"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="50dp"
         android:ems="10"
         android:hint="HH:mm:ss"
         android:inputType="text"
@@ -106,6 +106,13 @@
         android:layout_height="wrap_content"
         android:backgroundTint="#C85353"
         android:text="DELETE" />
+
+    <Button
+        android:id="@+id/shareBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#C85353"
+        android:text="SHARE" />
 
 
 

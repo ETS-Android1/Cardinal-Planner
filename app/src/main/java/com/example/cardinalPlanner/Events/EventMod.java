@@ -18,6 +18,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.cardinalPlanner.R;
+import com.example.cardinalPlanner.ShareEvents;
 import com.example.cardinalPlanner.model.Events;
 import com.example.cardinalPlanner.model.ToDo;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -39,7 +40,7 @@ public class EventMod extends AppCompatActivity {
     private EditText NameInput, dateInput, timeInput,meetingLinkInput, categoryInput, descriptionInput;
     private RadioButton notificationsBtn;
     private boolean notifications = false;
-    private Button finish, delete,visitLink;
+    private Button finish, delete,visitLink, shareEvent;
     private static final SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
     private String docID;
     private FirebaseFirestore ref;
@@ -103,6 +104,15 @@ public class EventMod extends AppCompatActivity {
                 Uri uri = Uri.parse("http://" + meetingLinkInput.getText().toString()); // missing 'http://' will cause crashed
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
+            }
+        });
+        shareEvent = findViewById(R.id.shareBtn);
+        shareEvent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent shareI = new Intent(EventMod.this, ShareEvents.class);
+                shareI.putExtra("key_share", docID);
+                startActivity(shareI);
             }
         });
 

@@ -49,7 +49,8 @@ public class EventMgmt extends AppCompatActivity {
         eventList.setLayoutManager(new LinearLayoutManager(this));
         ref = FirebaseFirestore.getInstance();
         CollectionReference eventsCol = ref.collection("Event");
-        query = eventsCol.whereEqualTo("userId", userID);
+        //query = eventsCol.whereEqualTo("userId", userID);
+        query = eventsCol.whereArrayContains("listIDs", userID);
 
         FirestoreRecyclerOptions<Events> options = new FirestoreRecyclerOptions.Builder<Events>()
                 .setQuery(query, Events.class)
@@ -95,9 +96,6 @@ public class EventMgmt extends AppCompatActivity {
                     String thing = items.get(itemPosition);
                     Intent modifyEvent = new Intent(EventMgmt.this, EventMod.class);
                     modifyEvent.putExtra("key", thing);
-                    //Log.i(TAG, tt + " : " + dbKey);
-                    Toast.makeText(EventMgmt.this, tt,
-                            Toast.LENGTH_SHORT).show();
                     startActivity(modifyEvent);
                 }
             });
