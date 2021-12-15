@@ -30,7 +30,7 @@
     <EditText
         android:id="@+id/eventCategoryInput"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="wrap_content"
         android:ems="10"
         android:gravity="center"
         android:hint="Category"
@@ -54,7 +54,7 @@
     <EditText
         android:id="@+id/DescriptionInput"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="67dp"
         android:ems="10"
         android:hint="Description"
         android:inputType="textLongMessage"
@@ -63,14 +63,14 @@
     <RadioButton
         android:id="@+id/NotificationsBtn"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
+        android:layout_height="43dp"
         android:text=" Set Notifications On" />
 
 
     <TextView
         android:id="@+id/TitleTime"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
+        android:layout_height="51dp"
         android:text="EVENT TIME"
         android:textAlignment="center"
         android:textSize="20sp" />

@@ -27,14 +27,14 @@ tools:context=".ToDoMod">
     android:inputType="text"
     android:hint="Name" />
 
-<EditText
-    android:id="@+id/DescriptionInput"
-    android:layout_width="match_parent"
-    android:layout_height="100dp"
-    android:ems="10"
-    android:inputType="textLongMessage"
-    android:hint="Description"
-    android:textAlignment="center" />
+    <EditText
+        android:id="@+id/DescriptionInput"
+        android:layout_width="match_parent"
+        android:layout_height="76dp"
+        android:ems="10"
+        android:hint="Description"
+        android:inputType="textLongMessage"
+        android:textAlignment="center" />
 
 <RadioButton
     android:id="@+id/NotificationsBtn"
@@ -79,7 +79,7 @@ tools:context=".ToDoMod">
     <TextView
         android:id="@+id/TitleTime"
         android:layout_width="match_parent"
-        android:layout_height="75dp"
+        android:layout_height="56dp"
         android:text="EVENT TIME"
         android:textAlignment="center"
         android:textSize="20sp" />
@@ -105,14 +105,14 @@ tools:context=".ToDoMod">
     <Button
         android:id="@+id/updateEventBtn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="34dp"
         android:backgroundTint="#C85353"
         android:text="UPDATE" />
 
     <Button
         android:id="@+id/deleteEventBtn"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
         android:backgroundTint="#C85353"
         android:text="DELETE" />
 
