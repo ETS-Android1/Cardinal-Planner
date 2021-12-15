@@ -7,17 +7,19 @@ import androidx.core.app.NotificationManagerCompat;
 import android.app.AlarmManager;
 import android.app.Notification;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Toast;
 
-import com.example.cardinalPlanner.AlarmReciver;
+import com.example.cardinalPlanner.AlarmReceiver;
 import com.example.cardinalPlanner.R;
 import com.example.cardinalPlanner.ToDoMgmt;
 import com.example.cardinalPlanner.model.ToDo;
@@ -35,6 +37,7 @@ public class CreateToDo extends AppCompatActivity {
     private FirebaseFirestore mFirestore;
     EditText NameInput, timeInput, dateInput, descriptionInput;
     RadioButton notificationsBtn, persistUntilCompletion;
+    CheckBox evryHr,evryDy;
     boolean notifications = false;
     boolean PUC = false;
     Button finish;
@@ -55,6 +58,8 @@ public class CreateToDo extends AppCompatActivity {
         timeInput = findViewById(R.id.eventTimeInput);
         descriptionInput = findViewById(R.id.DescriptionInput);
         notificationsBtn = findViewById(R.id.NotificationsBtn);
+        evryHr = findViewById(R.id.checkBoxHour);
+        evryDy = findViewById(R.id.checkBoxHour);
         nm = NotificationManagerCompat.from(this);
         notificationsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,6 +110,7 @@ public class CreateToDo extends AppCompatActivity {
             Intent newI = new Intent(getApplicationContext(), ToDoMgmt.class);
             PendingIntent pend = PendingIntent.getActivity(getApplicationContext(), 0, newI, 0);
         if(PUC){
+
             Notification notification = new NotificationCompat.Builder(this, CHANNEL_1_ID)
                     .setSmallIcon(R.drawable.ic_launcher)
                     .setContentTitle("TODO: " + NameInput.getText().toString())
@@ -133,6 +139,36 @@ public class CreateToDo extends AppCompatActivity {
                     .build();
 
             nm.notify((int)notificationTime, notification);
+        }
+        if(PUC && evryDy.isChecked()){
+            Log.d(TAG, "sendOnChannelOne: Setting day alarm");
+            Context context = getApplicationContext();
+            Intent alarmIntent = new Intent(context, AlarmReceiver.class);
+            AlarmManager alarmMgr =
+                    (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+            PendingIntent pendingIntent =
+                    PendingIntent.getService(context, 1, alarmIntent,PendingIntent.FLAG_NO_CREATE);
+            alarmMgr.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
+                    SystemClock.elapsedRealtime() + AlarmManager.INTERVAL_DAY,
+                    AlarmManager.INTERVAL_DAY, pendingIntent);
+            if (pendingIntent != null && alarmMgr != null) {
+                alarmMgr.cancel(pendingIntent);
+            }
+        }
+        if(PUC && evryHr.isChecked()){
+            Log.d(TAG, "sendOnChannelOne: setting hour alarm");
+            Context context = getApplicationContext();
+            Intent alarmIntent = new Intent(context, AlarmReceiver.class);
+            AlarmManager alarmMgr =
+                    (AlarmManager) context.getSystemService(Context.ALARM_SERVICE);
+            PendingIntent pendingIntent =
+                    PendingIntent.getService(context, 2, alarmIntent,PendingIntent.FLAG_NO_CREATE);
+            alarmMgr.setInexactRepeating(AlarmManager.ELAPSED_REALTIME_WAKEUP,
+                    SystemClock.elapsedRealtime() + AlarmManager.INTERVAL_HOUR,
+                    AlarmManager.INTERVAL_HOUR, pendingIntent);
+            if (pendingIntent != null && alarmMgr != null) {
+                alarmMgr.cancel(pendingIntent);
+            }
         }
 
     }

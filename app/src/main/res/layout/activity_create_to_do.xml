@@ -42,11 +42,32 @@
         android:layout_height="55dp"
         android:text=" Set Notifications On" />
 
-    <RadioButton
-        android:id="@+id/persistComplete"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:text=" Persists Until Complete" />
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/persistComplete"
+            android:layout_width="wrap_content"
+            android:layout_height="55dp"
+            android:text=" Persists Until Complete" />
+
+        <CheckBox
+            android:id="@+id/checkBoxHour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Every Hour" />
+
+        <CheckBox
+            android:id="@+id/checkBoxDay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Every Day" />
+
+    </LinearLayout>
 
 
     <TextView
