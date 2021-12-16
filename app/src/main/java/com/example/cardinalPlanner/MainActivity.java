@@ -192,6 +192,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 speaker.allow(true);
                 for(int z = 0;z < eventListOfDocuments.size(); z++){
+                    speaker.speak("Event name: ");
+                    speaker.pause(SHORT_DURATION);
                     speaker.speak(eventListOfDocuments.get(z).get("name").toString());
                     speaker.pause(SHORT_DURATION);
                     //timestamp conversion through todate tostring produces abbr day abbr month hours mins seconds year
@@ -207,6 +209,8 @@ public class MainActivity extends AppCompatActivity {
 
                 }
                 for(int i = 0;i < toDoListOfDocuments.size(); i++){
+                    speaker.speak("To-do name: ");
+                    speaker.pause(SHORT_DURATION);
                     speaker.speak(toDoListOfDocuments.get(i).get("name").toString());
                     speaker.pause(SHORT_DURATION);
                     Timestamp mTime1 = (Timestamp) toDoListOfDocuments.get(i).get("date");
