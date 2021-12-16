@@ -1,18 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.navigation:navigation-fragment:2.3.5@aar">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/navigation-fragment-2.3.5.aar/70cddb37f2d24a978b0a48aa16542b17/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/navigation-fragment-2.3.5.aar/70cddb37f2d24a978b0a48aa16542b17/res" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/navigation-fragment-2.3.5.aar/70cddb37f2d24a978b0a48aa16542b17/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/navigation-fragment-2.3.5.aar/2e9a331d2e287a14e0b159bcfdad95b2/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/navigation-fragment-2.3.5.aar/2e9a331d2e287a14e0b159bcfdad95b2/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/navigation-fragment-2.3.5.aar/2e9a331d2e287a14e0b159bcfdad95b2/res" />
-      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/navigation-fragment-2.3.5.aar/72f17d865cfe0fed3140c8f9cc596161/res" />
-      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/navigation-fragment-2.3.5.aar/72f17d865cfe0fed3140c8f9cc596161/AndroidManifest.xml" />
-      <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/navigation-fragment-2.3.5.aar/72f17d865cfe0fed3140c8f9cc596161/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/navigation-fragment-2.3.5.aar/1b89e640249dc6b2e753dbcfd96e5b7c/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/navigation-fragment-2.3.5.aar/1b89e640249dc6b2e753dbcfd96e5b7c/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/navigation-fragment-2.3.5.aar/1b89e640249dc6b2e753dbcfd96e5b7c/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/navigation-fragment-2.3.5.aar/2e9a331d2e287a14e0b159bcfdad95b2/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

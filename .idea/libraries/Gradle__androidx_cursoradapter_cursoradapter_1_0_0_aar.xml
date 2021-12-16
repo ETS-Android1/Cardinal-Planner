@@ -1,18 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.cursoradapter:cursoradapter:1.0.0@aar">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/280c28b23dac994c3ec34ac9feed0abb/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/280c28b23dac994c3ec34ac9feed0abb/res" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/280c28b23dac994c3ec34ac9feed0abb/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/14f05d259df30d387a40845fd2d29642/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/14f05d259df30d387a40845fd2d29642/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/14f05d259df30d387a40845fd2d29642/AndroidManifest.xml" />
-      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/44819779b09b45d5e25b2d48df81b3f7/AndroidManifest.xml" />
-      <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/44819779b09b45d5e25b2d48df81b3f7/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/44819779b09b45d5e25b2d48df81b3f7/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/85afe4725b9de27ab4fb927ec9b28975/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/85afe4725b9de27ab4fb927ec9b28975/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/cursoradapter-1.0.0.aar/85afe4725b9de27ab4fb927ec9b28975/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

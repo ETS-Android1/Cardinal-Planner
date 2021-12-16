@@ -1,18 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.navigation:navigation-runtime:2.3.5@aar">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/navigation-runtime-2.3.5.aar/4545ec9a956bf930ea16c7dd2d5467b1/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/navigation-runtime-2.3.5.aar/4545ec9a956bf930ea16c7dd2d5467b1/res" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/navigation-runtime-2.3.5.aar/4545ec9a956bf930ea16c7dd2d5467b1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/navigation-runtime-2.3.5.aar/1fc61fec13f4371519b22498ac48d297/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/navigation-runtime-2.3.5.aar/1fc61fec13f4371519b22498ac48d297/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/navigation-runtime-2.3.5.aar/1fc61fec13f4371519b22498ac48d297/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/navigation-runtime-2.3.5.aar/1fc61fec13f4371519b22498ac48d297/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/navigation-runtime-2.3.5.aar/972a7cf20d1f8488113763aa2ef36e97/res" />
-      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/navigation-runtime-2.3.5.aar/972a7cf20d1f8488113763aa2ef36e97/AndroidManifest.xml" />
-      <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/navigation-runtime-2.3.5.aar/972a7cf20d1f8488113763aa2ef36e97/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/navigation-runtime-2.3.5.aar/885dd45bb2f8519c08c3b621c32bb3a5/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/navigation-runtime-2.3.5.aar/885dd45bb2f8519c08c3b621c32bb3a5/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/navigation-runtime-2.3.5.aar/885dd45bb2f8519c08c3b621c32bb3a5/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

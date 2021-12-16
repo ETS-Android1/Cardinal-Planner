@@ -1,18 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.tracing:tracing:1.0.0@aar">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/tracing-1.0.0.aar/42c24bae6d39d55d990c23b1627023d1/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/tracing-1.0.0.aar/42c24bae6d39d55d990c23b1627023d1/res" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/tracing-1.0.0.aar/42c24bae6d39d55d990c23b1627023d1/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/tracing-1.0.0.aar/2e1f5d351b48ac3a4859113778261275/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/tracing-1.0.0.aar/2e1f5d351b48ac3a4859113778261275/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/tracing-1.0.0.aar/2e1f5d351b48ac3a4859113778261275/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/tracing-1.0.0.aar/dff480c7f441f02be46d8fc14dadd20d/res" />
-      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/tracing-1.0.0.aar/dff480c7f441f02be46d8fc14dadd20d/AndroidManifest.xml" />
-      <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/tracing-1.0.0.aar/dff480c7f441f02be46d8fc14dadd20d/jars/classes.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/tracing-1.0.0.aar/b3a0c4ba8765854fac0d47b666b1a60e/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/tracing-1.0.0.aar/b3a0c4ba8765854fac0d47b666b1a60e/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/tracing-1.0.0.aar/b3a0c4ba8765854fac0d47b666b1a60e/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/tracing-1.0.0.aar/2e1f5d351b48ac3a4859113778261275/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/tracing-1.0.0.aar/2e1f5d351b48ac3a4859113778261275/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -1,24 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.material:material:1.4.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/material-1.4.0.aar/677b58ab14c7d0a9f45ed3803f99f213/annotations.zip!/" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/material-1.4.0.aar/8a76a7c0e549296bba3ced50e1b5324e/annotations.zip!/" />
-      <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/material-1.4.0.aar/fc46981d46d16eb8cb116def38b13ea9/annotations.zip!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/material-1.4.0.aar/c816b94d6faa60122d49f6626181b427/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/material-1.4.0.aar/677b58ab14c7d0a9f45ed3803f99f213/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/material-1.4.0.aar/677b58ab14c7d0a9f45ed3803f99f213/res" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/material-1.4.0.aar/677b58ab14c7d0a9f45ed3803f99f213/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/material-1.4.0.aar/8a76a7c0e549296bba3ced50e1b5324e/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/material-1.4.0.aar/8a76a7c0e549296bba3ced50e1b5324e/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/material-1.4.0.aar/8a76a7c0e549296bba3ced50e1b5324e/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/material-1.4.0.aar/8a76a7c0e549296bba3ced50e1b5324e/AndroidManifest.xml" />
-      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/material-1.4.0.aar/fc46981d46d16eb8cb116def38b13ea9/res" />
-      <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/material-1.4.0.aar/fc46981d46d16eb8cb116def38b13ea9/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/material-1.4.0.aar/fc46981d46d16eb8cb116def38b13ea9/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/material-1.4.0.aar/c816b94d6faa60122d49f6626181b427/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/material-1.4.0.aar/c816b94d6faa60122d49f6626181b427/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/material-1.4.0.aar/c816b94d6faa60122d49f6626181b427/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

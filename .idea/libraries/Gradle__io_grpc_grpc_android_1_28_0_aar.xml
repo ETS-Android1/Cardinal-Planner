@@ -1,18 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: io.grpc:grpc-android:1.28.0@aar">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/grpc-android-1.28.0.aar/7510915ec2678293e5d67447263e5606/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/grpc-android-1.28.0.aar/7510915ec2678293e5d67447263e5606/res" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/grpc-android-1.28.0.aar/7510915ec2678293e5d67447263e5606/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/grpc-android-1.28.0.aar/2b2dc2046e22c46bd2a005c93501d9b3/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/grpc-android-1.28.0.aar/2b2dc2046e22c46bd2a005c93501d9b3/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/grpc-android-1.28.0.aar/2b2dc2046e22c46bd2a005c93501d9b3/res" />
-      <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/grpc-android-1.28.0.aar/2a986dc3795b05746e1777b106596aea/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/grpc-android-1.28.0.aar/2a986dc3795b05746e1777b106596aea/AndroidManifest.xml" />
-      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/grpc-android-1.28.0.aar/2a986dc3795b05746e1777b106596aea/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/grpc-android-1.28.0.aar/8e3f2633f2cff97b5548fae3b16befc5/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/grpc-android-1.28.0.aar/8e3f2633f2cff97b5548fae3b16befc5/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/grpc-android-1.28.0.aar/8e3f2633f2cff97b5548fae3b16befc5/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/grpc-android-1.28.0.aar/2b2dc2046e22c46bd2a005c93501d9b3/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

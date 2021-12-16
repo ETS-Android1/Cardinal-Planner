@@ -1,18 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.google.android.gms:play-services-auth:19.2.0@aar">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/play-services-auth-19.2.0.aar/d08f4d53aa8693672e3dd97a015a22fb/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/play-services-auth-19.2.0.aar/d08f4d53aa8693672e3dd97a015a22fb/res" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/play-services-auth-19.2.0.aar/d08f4d53aa8693672e3dd97a015a22fb/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-auth-19.2.0.aar/343ff5d31b76447a9fc3ab3725fe1a93/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-auth-19.2.0.aar/343ff5d31b76447a9fc3ab3725fe1a93/AndroidManifest.xml" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-auth-19.2.0.aar/343ff5d31b76447a9fc3ab3725fe1a93/res" />
-      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/play-services-auth-19.2.0.aar/807fd957cb0e5710d7c496de1a0ed8eb/AndroidManifest.xml" />
-      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/play-services-auth-19.2.0.aar/807fd957cb0e5710d7c496de1a0ed8eb/res" />
-      <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/play-services-auth-19.2.0.aar/807fd957cb0e5710d7c496de1a0ed8eb/jars/classes.jar!/" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-auth-19.2.0.aar/6f5eb340a1b9e57ee597f35c9b66eba5/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-auth-19.2.0.aar/6f5eb340a1b9e57ee597f35c9b66eba5/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-auth-19.2.0.aar/6f5eb340a1b9e57ee597f35c9b66eba5/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/play-services-auth-19.2.0.aar/343ff5d31b76447a9fc3ab3725fe1a93/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

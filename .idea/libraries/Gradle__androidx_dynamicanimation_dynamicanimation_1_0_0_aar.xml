@@ -1,18 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.dynamicanimation:dynamicanimation:1.0.0@aar">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/dynamicanimation-1.0.0.aar/c1569a9028d9588736512dc15b09911a/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/dynamicanimation-1.0.0.aar/c1569a9028d9588736512dc15b09911a/res" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/dynamicanimation-1.0.0.aar/c1569a9028d9588736512dc15b09911a/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/dynamicanimation-1.0.0.aar/5829f22660d7b4d75a11510defcbf710/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/dynamicanimation-1.0.0.aar/5829f22660d7b4d75a11510defcbf710/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/dynamicanimation-1.0.0.aar/5829f22660d7b4d75a11510defcbf710/AndroidManifest.xml" />
-      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/dynamicanimation-1.0.0.aar/67daff4fcc531f4e74d760f417500f8e/AndroidManifest.xml" />
-      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/dynamicanimation-1.0.0.aar/67daff4fcc531f4e74d760f417500f8e/res" />
-      <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/dynamicanimation-1.0.0.aar/67daff4fcc531f4e74d760f417500f8e/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/dynamicanimation-1.0.0.aar/a735fccb73cd64e6e23ba8be9d2d4b4d/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/dynamicanimation-1.0.0.aar/a735fccb73cd64e6e23ba8be9d2d4b4d/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/dynamicanimation-1.0.0.aar/a735fccb73cd64e6e23ba8be9d2d4b4d/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

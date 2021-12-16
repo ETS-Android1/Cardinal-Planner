@@ -1,18 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.lifecycle:lifecycle-livedata-core:2.3.1@aar">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.3.1.aar/1c2c302f692dbe27037833b1b45c8a46/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.3.1.aar/1c2c302f692dbe27037833b1b45c8a46/res" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.3.1.aar/1c2c302f692dbe27037833b1b45c8a46/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.3.1.aar/49d2ff24a1bbfb415bcaac0c0fa3feec/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.3.1.aar/49d2ff24a1bbfb415bcaac0c0fa3feec/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.3.1.aar/49d2ff24a1bbfb415bcaac0c0fa3feec/AndroidManifest.xml" />
-      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.3.1.aar/6ceb06466f2d42460aec286841db4c2a/AndroidManifest.xml" />
-      <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.3.1.aar/6ceb06466f2d42460aec286841db4c2a/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.3.1.aar/6ceb06466f2d42460aec286841db4c2a/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.3.1.aar/5b3ce3e6e3c45db87d55d2b7f0cb1219/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.3.1.aar/5b3ce3e6e3c45db87d55d2b7f0cb1219/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lifecycle-livedata-core-2.3.1.aar/5b3ce3e6e3c45db87d55d2b7f0cb1219/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

@@ -1,18 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.versionedparcelable:versionedparcelable:1.1.1@aar">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.1.1.aar/46d4fbee4a6d842fbc6844b2ef1ce7d9/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.1.1.aar/46d4fbee4a6d842fbc6844b2ef1ce7d9/res" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.1.1.aar/46d4fbee4a6d842fbc6844b2ef1ce7d9/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.1.1.aar/c867bc33fd9a724962f468b3f355112c/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.1.1.aar/c867bc33fd9a724962f468b3f355112c/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.1.1.aar/c867bc33fd9a724962f468b3f355112c/res" />
-      <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/versionedparcelable-1.1.1.aar/7cfb54c2eb2f0c6331470d14471b9659/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/versionedparcelable-1.1.1.aar/7cfb54c2eb2f0c6331470d14471b9659/res" />
-      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/versionedparcelable-1.1.1.aar/7cfb54c2eb2f0c6331470d14471b9659/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.1.1.aar/7a2bdd37a8c6a69c0c609ba374788a7c/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.1.1.aar/7a2bdd37a8c6a69c0c609ba374788a7c/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.1.1.aar/7a2bdd37a8c6a69c0c609ba374788a7c/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/versionedparcelable-1.1.1.aar/c867bc33fd9a724962f468b3f355112c/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

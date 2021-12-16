@@ -1,20 +1,12 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.core:core:1.6.0@aar">
     <ANNOTATIONS>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/core-1.6.0.aar/d2c254b1baf9e096a756ed7e4ada9732/annotations.zip!/" />
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/core-1.6.0.aar/b786354ba8c300eb9d34dd084361ccb4/annotations.zip!/" />
-      <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/core-1.6.0.aar/97bb6d4e3b1ee85e8b5430ea20c55862/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-1.6.0.aar/c7fe7472e0e51906d19b02b20765f565/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/core-1.6.0.aar/d2c254b1baf9e096a756ed7e4ada9732/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/core-1.6.0.aar/d2c254b1baf9e096a756ed7e4ada9732/res" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/core-1.6.0.aar/d2c254b1baf9e096a756ed7e4ada9732/AndroidManifest.xml" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/core-1.6.0.aar/b786354ba8c300eb9d34dd084361ccb4/res" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/core-1.6.0.aar/b786354ba8c300eb9d34dd084361ccb4/AndroidManifest.xml" />
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/core-1.6.0.aar/b786354ba8c300eb9d34dd084361ccb4/jars/classes.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/core-1.6.0.aar/97bb6d4e3b1ee85e8b5430ea20c55862/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/core-1.6.0.aar/97bb6d4e3b1ee85e8b5430ea20c55862/AndroidManifest.xml" />
-      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/core-1.6.0.aar/97bb6d4e3b1ee85e8b5430ea20c55862/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-1.6.0.aar/c7fe7472e0e51906d19b02b20765f565/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-1.6.0.aar/c7fe7472e0e51906d19b02b20765f565/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/core-1.6.0.aar/c7fe7472e0e51906d19b02b20765f565/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

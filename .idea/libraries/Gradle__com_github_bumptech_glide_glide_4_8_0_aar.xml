@@ -1,18 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.github.bumptech.glide:glide:4.8.0@aar">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/jetified-glide-4.8.0.aar/b26ad73166bb1f44f2c6c6b4bc852e09/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/jetified-glide-4.8.0.aar/b26ad73166bb1f44f2c6c6b4bc852e09/res" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/jetified-glide-4.8.0.aar/b26ad73166bb1f44f2c6c6b4bc852e09/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-glide-4.8.0.aar/6f0dcbd483dc77abc4bc5de8abedd20b/res" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-glide-4.8.0.aar/6f0dcbd483dc77abc4bc5de8abedd20b/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-glide-4.8.0.aar/6f0dcbd483dc77abc4bc5de8abedd20b/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-glide-4.8.0.aar/6f0dcbd483dc77abc4bc5de8abedd20b/AndroidManifest.xml" />
-      <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/jetified-glide-4.8.0.aar/a7e8841c3f9ae30291194eea81850240/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/jetified-glide-4.8.0.aar/a7e8841c3f9ae30291194eea81850240/res" />
-      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/jetified-glide-4.8.0.aar/a7e8841c3f9ae30291194eea81850240/AndroidManifest.xml" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-glide-4.8.0.aar/e61e64272c842b72c9ee7cbdfc373960/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-glide-4.8.0.aar/e61e64272c842b72c9ee7cbdfc373960/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-glide-4.8.0.aar/e61e64272c842b72c9ee7cbdfc373960/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

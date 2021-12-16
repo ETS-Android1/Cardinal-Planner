@@ -1,6 +1,7 @@
 package com.example.cardinalPlanner;
 
 //import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -9,6 +10,7 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.speech.RecognizerIntent;
+import android.speech.tts.TextToSpeech;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -18,11 +20,18 @@ import com.example.cardinalPlanner.Events.CreateEvents;
 import com.example.cardinalPlanner.Events.EventMgmt;
 import com.example.cardinalPlanner.ToDos.CreateToDo;
 import com.example.cardinalPlanner.util.FirebaseUtil;
+import com.example.cardinalPlanner.util.Speaker;
 import com.example.cardinalPlanner.viewmodel.MainActivityViewModel;
 import com.firebase.ui.auth.AuthUI;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
+
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -37,12 +46,19 @@ public class MainActivity extends AppCompatActivity {
     private static final int RC_SIGN_IN = 9001;
     private static final int LIMIT = 50;
     public static final int VOICE_RECOGNITION_REQUEST_CODE = 1234;
+    private final int CHECK_CODE = 0x1;
+    private final int LONG_DURATION = 5000;
+    private final int SHORT_DURATION = 1500;
 
     private FirebaseFirestore mFirestore;
     private Query mQuery;
     private MainActivityViewModel mViewModel;
-    private Button userInfo,logout, events, todo, eventMgmt, toDoMgmt, voiceCommand, shareMenu, viewPlan;
+    private Button userInfo,logout, events, todo, eventMgmt, toDoMgmt, voiceCommand, shareMenu, viewPlan, ttsBtn;
     public ListView voiceList;
+    private Speaker speaker;
+    private List<DocumentSnapshot> eventListOfDocuments, toDoListOfDocuments;
+    private String userID;
+
 
     /**
      * Initializes all UI elemts and fills in data from database if needed
@@ -54,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mViewModel = new ViewModelProvider(this).get(MainActivityViewModel.class);
-
+        checkTTS();
         FirebaseFirestore.setLoggingEnabled(true);
         mFirestore = FirebaseUtil.getFirestore();
         logout = findViewById(R.id.logOutBtn);
@@ -144,6 +160,69 @@ public class MainActivity extends AppCompatActivity {
 
         voiceCommand = (Button) findViewById(R.id.voiceCommandBtn);
         voiceList = (ListView) findViewById(R.id.speechList);
+        userID = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        FirebaseFirestore.getInstance()
+                .collection("Event").whereArrayContains("listIDs", userID)
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            eventListOfDocuments = task.getResult().getDocuments();
+                        }
+                    }
+                });
+        FirebaseFirestore.getInstance()
+                .collection("toDo").whereArrayContains("listIDs", userID)
+                .get()
+                .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                        if (task.isSuccessful()) {
+                            toDoListOfDocuments = task.getResult().getDocuments();
+                        }
+                    }
+                });
+
+
+        ttsBtn = (Button) findViewById(R.id.ttsBtn);
+        ttsBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                speaker.allow(true);
+                for(int z = 0;z < eventListOfDocuments.size(); z++){
+                    speaker.speak(eventListOfDocuments.get(z).get("name").toString());
+                    speaker.pause(SHORT_DURATION);
+                    //timestamp conversion through todate tostring produces abbr day abbr month hours mins seconds year
+                    Timestamp mTime = (Timestamp) eventListOfDocuments.get(z).get("date");
+                    speaker.speak("on ");
+                    speaker.pause(800);
+                    speaker.speak(mTime.toDate().toString());
+                    speaker.pause(800);
+                    speaker.speak("description: ");
+                    speaker.pause(1000);
+                    speaker.speak(eventListOfDocuments.get(z).get("description").toString());
+                    speaker.pause(LONG_DURATION);
+
+                }
+                for(int i = 0;i < toDoListOfDocuments.size(); i++){
+                    speaker.speak(toDoListOfDocuments.get(i).get("name").toString());
+                    speaker.pause(SHORT_DURATION);
+                    Timestamp mTime1 = (Timestamp) toDoListOfDocuments.get(i).get("date");
+                    speaker.speak("on ");
+                    speaker.pause(800);
+                    speaker.speak(mTime1.toDate().toString());
+                    speaker.pause(SHORT_DURATION);
+                    speaker.speak("description: ");
+                    speaker.pause(1000);
+                    speaker.speak(toDoListOfDocuments.get(i).get("description").toString());
+                    speaker.pause(LONG_DURATION);
+
+                }
+
+            }
+        });
 
 
         // Check to see if a recognition activity is present
@@ -179,6 +258,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(shareIntent);
     }
 
+
     /**
      * Starts voice command listerner/recorder
      */
@@ -187,6 +267,11 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         intent.putExtra(RecognizerIntent.EXTRA_PROMPT, "Speech Command Test");
         startActivityForResult(intent, VOICE_RECOGNITION_REQUEST_CODE);
+    }
+    private void checkTTS(){
+        Intent check = new Intent();
+        check.setAction(TextToSpeech.Engine.ACTION_CHECK_TTS_DATA);
+        startActivityForResult(check, CHECK_CODE);
     }
 
     /**
@@ -214,6 +299,15 @@ public class MainActivity extends AppCompatActivity {
             }else if(matches.contains("edit event")||matches.contains("change event")||matches.contains("remove event")||matches.contains("stop event")){
                 Intent eventMgmt = new Intent(MainActivity.this, EventMgmt.class);
                 startActivity(eventMgmt);
+            }
+        }
+        if(requestCode == CHECK_CODE){
+            if(resultCode == TextToSpeech.Engine.CHECK_VOICE_DATA_PASS){
+                speaker = new Speaker(this);
+            }else {
+                Intent install = new Intent();
+                install.setAction(TextToSpeech.Engine.ACTION_INSTALL_TTS_DATA);
+                startActivity(install);
             }
         }
     }

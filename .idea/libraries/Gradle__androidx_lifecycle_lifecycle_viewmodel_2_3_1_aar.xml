@@ -1,18 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.lifecycle:lifecycle-viewmodel:2.3.1@aar">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.3.1.aar/9d16604da0dfcfd9aeb8445fef9e8d08/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.3.1.aar/9d16604da0dfcfd9aeb8445fef9e8d08/res" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.3.1.aar/9d16604da0dfcfd9aeb8445fef9e8d08/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.3.1.aar/bfa581c43f365a373326bc613c6a9eea/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.3.1.aar/bfa581c43f365a373326bc613c6a9eea/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.3.1.aar/bfa581c43f365a373326bc613c6a9eea/AndroidManifest.xml" />
-      <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.3.1.aar/8c9e7d5d72f4e16acc6d292e08d3ec34/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.3.1.aar/8c9e7d5d72f4e16acc6d292e08d3ec34/res" />
-      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.3.1.aar/8c9e7d5d72f4e16acc6d292e08d3ec34/AndroidManifest.xml" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.3.1.aar/a9ac1c4d2205113c13d2319fee2ea60a/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.3.1.aar/a9ac1c4d2205113c13d2319fee2ea60a/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/lifecycle-viewmodel-2.3.1.aar/a9ac1c4d2205113c13d2319fee2ea60a/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

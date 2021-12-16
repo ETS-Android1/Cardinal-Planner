@@ -1,18 +1,9 @@
 <component name="libraryTable">
   <library name="Gradle: com.firebaseui:firebase-ui-storage:5.0.0@aar">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/jetified-firebase-ui-storage-5.0.0.aar/7530a52f49be359d0608d7f4a8bf5b77/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/jetified-firebase-ui-storage-5.0.0.aar/7530a52f49be359d0608d7f4a8bf5b77/res" />
-      <root url="file://$PROJECT_DIR$/../.gradle/caches/transforms-1/files-1.1/jetified-firebase-ui-storage-5.0.0.aar/7530a52f49be359d0608d7f4a8bf5b77/AndroidManifest.xml" />
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-firebase-ui-storage-5.0.0.aar/978d4f1de2bfbc0e10903068cfeb9114/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-firebase-ui-storage-5.0.0.aar/978d4f1de2bfbc0e10903068cfeb9114/res" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-firebase-ui-storage-5.0.0.aar/978d4f1de2bfbc0e10903068cfeb9114/AndroidManifest.xml" />
-      <root url="jar://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/jetified-firebase-ui-storage-5.0.0.aar/7519063fccd78660f6e6d96880d5dd2a/jars/classes.jar!/" />
-      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/jetified-firebase-ui-storage-5.0.0.aar/7519063fccd78660f6e6d96880d5dd2a/AndroidManifest.xml" />
-      <root url="file://$PROJECT_DIR$/../../company1_android/frontend/gradle/caches/transforms-1/files-1.1/jetified-firebase-ui-storage-5.0.0.aar/7519063fccd78660f6e6d96880d5dd2a/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-firebase-ui-storage-5.0.0.aar/8a79d77bf46164186cba9789c7480658/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-firebase-ui-storage-5.0.0.aar/8a79d77bf46164186cba9789c7480658/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/jetified-firebase-ui-storage-5.0.0.aar/8a79d77bf46164186cba9789c7480658/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
